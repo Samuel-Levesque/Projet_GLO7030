@@ -38,7 +38,7 @@ import random # TODO Remove after predict method is final
 class DiagramScene(QGraphicsScene):
   def __init__(self, *args):
     QGraphicsScene.__init__(self, *args)
-    self.addItem(QGraphicsTextItem("Freehand drawing with pointer"))
+#    self.addItem(QGraphicsTextItem("Freehand drawing with pointer"))
     
     
     
@@ -113,9 +113,13 @@ class GraphicsView(QGraphicsView):
 class MainWindow(QMainWindow):
     def __init__(self, *args):
         QMainWindow.__init__(self, *args)
+
+        self.image_width = 800     
+        self.image_height = 800
+        
         self.scene = DiagramScene()
         self.view = GraphicsView(self.scene)
-        rect = QRectF(-500, -500, 200, 200)
+        rect = QRectF(0, 0, self.image_width, self.image_height)
         self.view.fitInView(rect)
         self.view.setSceneRect(rect)
         self.setCentralWidget(self.view)
@@ -150,7 +154,17 @@ class MainWindow(QMainWindow):
         
     def predict_drawing(self):
         # TODO Do forward pass and generate predictions graph
-#        self.view.
+        # Image extraction from drawing window
+        outputimg = QPixmap(self.image_width, self.image_height)
+        
+        painter = QPainter(outputimg)
+        painter.setRenderHint(QPainter.Antialiasing)
+        targetrect = QRectF(0, 0, self.image_width, self.image_height)
+        sourcerect = QRectF(0, 0, self.image_width, self.image_height)
+        self.scene.render(painter, targetrect, sourcerect)
+        outputimg.save("test.png", "PNG")
+        
+        painter.end()
         
         # random data
         data = [random.random() for i in range(10)]
@@ -176,7 +190,7 @@ def main(args):
     app = QApplication(args)
     app.setStyle(QStyleFactory.create("Fusion"))  # fixes gtk assertion errors
     mainWindow = MainWindow()
-    mainWindow.setGeometry(100, 100, 1000, 1000)
+    mainWindow.setGeometry(0, 0, 1000, 1000)
     mainWindow.show()
 
     sys.exit(app.exec_()) # Qt Main loop
