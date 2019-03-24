@@ -114,12 +114,14 @@ class MainWindow(QMainWindow):
     def __init__(self, *args):
         QMainWindow.__init__(self, *args)
 
-        self.image_width = 800     
+        self.image_width = 800
         self.image_height = 800
+        self.start_width = 100
+        self.start_height = 100
         
         self.scene = DiagramScene()
         self.view = GraphicsView(self.scene)
-        rect = QRectF(0, 0, self.image_width, self.image_height)
+        rect = QRectF(self.start_width, self.start_height, self.image_width, self.image_height)
         self.view.fitInView(rect)
         self.view.setSceneRect(rect)
         self.setCentralWidget(self.view)
@@ -156,12 +158,13 @@ class MainWindow(QMainWindow):
         # TODO Do forward pass and generate predictions graph
         # Image extraction from drawing window
         outputimg = QPixmap(self.image_width, self.image_height)
+        QPixmapCache.clear()
         
         painter = QPainter(outputimg)
         painter.setRenderHint(QPainter.Antialiasing)
-        targetrect = QRectF(0, 0, self.image_width, self.image_height)
-        sourcerect = QRectF(0, 0, self.image_width, self.image_height)
-        self.scene.render(painter, targetrect, sourcerect)
+        targetrect = QRectF(self.start_width, self.start_height, self.image_width, self.image_height)
+        sourcerect = QRect(self.start_width, self.start_height, self.image_width, self.image_height)
+        self.view.render(painter, targetrect, sourcerect)
         outputimg.save("test.png", "PNG")
         
         painter.end()
@@ -190,7 +193,7 @@ def main(args):
     app = QApplication(args)
     app.setStyle(QStyleFactory.create("Fusion"))  # fixes gtk assertion errors
     mainWindow = MainWindow()
-    mainWindow.setGeometry(0, 0, 1000, 1000)
+    mainWindow.setGeometry(100, 100, 1000, 1000)
     mainWindow.show()
 
     sys.exit(app.exec_()) # Qt Main loop
