@@ -24,107 +24,57 @@ except ImportError:
 
 import sys
 
-from freehandTool.pointerEvent import PointerEvent
-from freehandTool.freehand import FreehandTool
+#from freehandTool.pointerEvent import PointerEvent
+#from freehandTool.freehand import FreehandTool
 # from freehandTool.ghostLine import PointerTrackGhost
-from freehandTool.freehandHead import PointerTrackGhost
-from freehandTool.segmentString.segmentString import SegmentString
+#from freehandTool.freehandHead import PointerTrackGhost
+#from freehandTool.segmentString.segmentString import SegmentString
 from matplotlib.figure import Figure
 from matplotlib.backends.backend_qt4agg import FigureCanvasQTAgg as FigureCanvas
 
 import random # TODO Remove after predict method is final
 
-
-class DiagramScene(QGraphicsScene):
-  def __init__(self, *args):
-    QGraphicsScene.__init__(self, *args)
-#    self.addItem(QGraphicsTextItem("Freehand drawing with pointer"))
-    
-    
-    
-class GraphicsView(QGraphicsView):
-  def __init__(self, parent=None):
-      super(GraphicsView, self).__init__(parent)
-      
-      assert self.dragMode() == QGraphicsView.NoDrag
-      self.setRenderHint(QPainter.Antialiasing)
-      self.setRenderHint(QPainter.TextAntialiasing)
-      self.freehandTool = FreehandTool(view=self)
-      self.setMouseTracking(True);  # Enable mouseMoveEvent
-      
-
-
-
-  ''' Delegate events to FreehandTool. '''
-    
-  def mouseMoveEvent(self, event):
-    ''' Tell freehandTool to update its SegmentString. '''
-    pointerEvent = PointerEvent()
-    pointerEvent.makeFromEvent(mapper=self, event=event)
-    self.freehandTool.pointerMoveEvent(pointerEvent)
-  
-  
-  def mousePressEvent(self, event):
-    '''
-    On mouse button down, create a new (infinitesmal) SegmentString and PointerTrackGhost.
-    freehandTool remembers and updates SegmentString.
-    '''
-    pointerEvent = PointerEvent()
-    pointerEvent.makeFromEvent(mapper=self, event=event)
-    
-    '''
-    freehandCurve as QGraphicsItem positioned at event in scene.
-    It keeps its internal data in its local CS
-    '''
-    freehandCurve = SegmentString()
-    self.scene().addItem(freehandCurve)
-    freehandCurve.setPos(pointerEvent.scenePos)
-
-    '''
-    headGhost at (0,0) in scene
-    it keeps its local data in CS equivalent to scene
-    '''
-    headGhost = PointerTrackGhost()
-    self.scene().addItem(headGhost)
-    
-    self.freehandTool.setSegmentString(segmentString=freehandCurve, 
-                                       pathHeadGhost=headGhost, 
-                                       scenePosition=pointerEvent.scenePos)
-    self.freehandTool.pointerPressEvent(pointerEvent)
-
-    
-  def mouseReleaseEvent(self, event):
-    pointerEvent = PointerEvent()
-    pointerEvent.makeFromEvent(mapper=self, event=event)
-    self.freehandTool.pointerReleaseEvent(pointerEvent)
-  
-  
-  def keyPressEvent(self, event):
-    if event.modifiers() & Qt.ControlModifier:
-      alternateMode = True
-    else:
-      alternateMode = False
-    self.freehandTool.testControlPoint(event, alternateMode)
-    
-  
-      
+###
+from PaintOnAPanel import Painter, Shape, Shapes, Colour3, base, form
       
 
 class MainWindow(QMainWindow):
+    Brush = True
+    DrawingShapes = Shapes()
+    IsPainting = False
+    IsEraseing = False
+
+    CurrentColour = Colour3(0,0,0)
+    CurrentWidth = 10
+    ShapeNum = 0
+    IsMouseing = False
+    PaintPanel = 0
+    
     def __init__(self, *args):
         QMainWindow.__init__(self, *args)
+        
+#        super(base,self).__init__()
+        self.setupUi(self)
+        self.setObjectName('Rig Helper')
+        self.PaintPanel = Painter(self)
+        self.PaintPanel.close()
+        self.DrawingFrame.insertWidget(0,self.PaintPanel)
+        self.DrawingFrame.setCurrentWidget(self.PaintPanel)
+        self.Establish_Connections()
+        
 
         self.image_width = 700
         self.image_height = 700
         self.start_width = 0
         self.start_height = 0
         
-        self.scene = DiagramScene()
-        self.view = GraphicsView(self.scene)
-        rect = QRectF(self.start_width, self.start_height, self.image_width, self.image_height)
-        self.view.fitInView(rect)
-        self.view.setSceneRect(rect)
-        self.setCentralWidget(self.view)
+#        self.scene = DiagramScene()
+#        self.view = GraphicsView(self.scene)
+#        rect = QRectF(self.start_width, self.start_height, self.image_width, self.image_height)
+#        self.view.fitInView(rect)
+#        self.view.setSceneRect(rect)
+        self.Painter = Painter(self)
+        self.setCentralWidget(self.Painter)
 
         # Clear Button Definition
         self.ClearButtonDock = QDockWidget(self)
@@ -192,6 +142,31 @@ class MainWindow(QMainWindow):
         
     def clear_drawing(self):
         self.scene.clear()
+        
+    def SwitchBrush(self):
+        if(self.Brush == True):
+            self.Brush = False
+        else:
+            self.Brush = True
+    
+    def ChangeColour(self):
+        col = QColorDialog.getColor()
+        if col.isValid():
+            self.CurrentColour = Colour3(col.red(),col.green(),col.blue())
+   
+    def ChangeThickness(self,num):
+        self.CurrentWidth = num
+            
+    def ClearSlate(self):
+        self.DrawingShapes = Shapes()
+        self.PaintPanel.repaint()  
+        
+              
+    def Establish_Connections(self):
+        self.BrushErase_Button.clicked.connect(self.SwitchBrush)
+        self.ChangeColour_Button.clicked.connect(self.ChangeColour)
+        self.Clear_Button.clicked.connect(self.ClearSlate)
+        self.Thickness_Spinner.valueChanged.connect(self.ChangeThickness)
         
         
         
