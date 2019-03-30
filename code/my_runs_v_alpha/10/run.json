@@ -1,0 +1,66 @@
+{
+  "artifacts": [],
+  "command": "main_program",
+  "experiment": {
+    "base_dir": "D:\\User\\William\\Documents\\Devoir\\Projet Deep\\Projet_GLO7030\\code",
+    "dependencies": [
+      "numpy==1.15.0",
+      "sacred==0.7.4"
+    ],
+    "mainfile": "main.py",
+    "name": "Doodle_Boys",
+    "repositories": [],
+    "sources": [
+      [
+        "data_set_file.py",
+        "_sources\\data_set_file_2225f8a61d29ddc77f5addb4ff7d494e.py"
+      ],
+      [
+        "main.py",
+        "_sources\\main_70591c237290e102d282c02f284d1d1e.py"
+      ]
+    ]
+  },
+  "heartbeat": "2019-03-30T13:59:54.389228",
+  "host": {
+    "ENV": {},
+    "cpu": "Intel(R) Core(TM) i7-8700 CPU @ 3.20GHz",
+    "hostname": "DESKTOP-04C6VBJ",
+    "os": [
+      "Windows",
+      "Windows-10-10.0.17763-SP0"
+    ],
+    "python_version": "3.7.1"
+  },
+  "meta": {
+    "command": "main_program",
+    "options": {
+      "--beat_interval": null,
+      "--capture": null,
+      "--comment": null,
+      "--debug": false,
+      "--enforce_clean": false,
+      "--file_storage": null,
+      "--force": false,
+      "--help": false,
+      "--loglevel": null,
+      "--mongo_db": null,
+      "--name": null,
+      "--pdb": false,
+      "--print_config": false,
+      "--priority": null,
+      "--queue": false,
+      "--sql": null,
+      "--tiny_db": null,
+      "--unobserved": false,
+      "COMMAND": null,
+      "UPDATE": [],
+      "help": false,
+      "with": false
+    }
+  },
+  "resources": [],
+  "result": null,
+  "start_time": "2019-03-30T13:59:34.318770",
+  "status": "RUNNING"
+}

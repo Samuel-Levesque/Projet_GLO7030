@@ -1,0 +1,10 @@
+bonjour
+1.4
+0.4
+Backend TkAgg is interactive backend. Turning interactive mode on.
+epoch numero 3
+0.9666666666666667
+1.7
+0.6
+epoch numero 3
+0.9666666666666667
