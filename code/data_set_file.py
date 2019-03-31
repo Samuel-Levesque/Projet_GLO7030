@@ -18,6 +18,11 @@ from utility import  save_object
 
 
 def create_encoding_deconding_dict(path_data):
+    '''
+    Crée un dictionnaire d'encoding des labels et un dictionnaire de decoding des labels
+    :param path_data:
+    :return:
+    '''
     filenames = os.listdir(path_data)
     filenames=sorted(filenames)
 
@@ -46,13 +51,15 @@ class DoodlesDataset(Dataset):
     adapté de https://www.kaggle.com/leighplt/pytorch-starter-kit/notebook
 
 
+    Dataset Pytorch pour une seul catégorie. Pour faire un dataset complet on concatène plusieurs de ces dataset
+
     """
 
     def __init__(self, csv_file, root_dir,encoding_dict=None, mode='train', nrows=1000, skiprows=None, size=224, transform=None):
         """
         Args:
             csv_file (string): Path to the csv file with annotations. ex :airplane.csv
-            root_dir (string): Directory with all the images.
+            root_dir (string): Directory with all the csv.
             mode (string): Train or test mode.
             nrows (int): Number of rows of file to read. Useful for reading pieces of large files.
             skiprows (list-like or integer or callable):
@@ -65,6 +72,8 @@ class DoodlesDataset(Dataset):
         file = os.path.join(self.root_dir, csv_file)
         self.size = size
         self.mode = mode
+
+
 
         #ESSAI
         random_row=False
@@ -127,14 +136,14 @@ class DoodlesDataset(Dataset):
 
 
 #Pour toutes les classe, nb_row par classe
-def create_huge_data_set(path,nb_rows,size_image,encoding_dict,skip_rows=None,filenames=None):
+def create_huge_data_set(path,nb_rows=1000,size_image=224,encoding_dict=None,skip_rows=None,filenames=None,mode="train"):
     '''
-    On pourra modifer plus tard
+    Concatène les dataset de plusieurs classes
 
     :param path:  path où se trouve le dossier avec les csv
     :param nb_rows:  Nombre de rows par classes
     :param size_image:
-    :param filenames: si on veut clase particulière ex : [airplane.csv, angel.csv]
+    :param filenames: si on veut des classe particulières ex : [airplane.csv, angel.csv]
     :return:
     '''
 
@@ -145,7 +154,7 @@ def create_huge_data_set(path,nb_rows,size_image,encoding_dict,skip_rows=None,fi
 
 
     doodles = ConcatDataset([DoodlesDataset(fn,path,nrows=nb_rows, size=size_image,
-                                            skiprows=skip_rows,encoding_dict=encoding_dict)
+                                            skiprows=skip_rows,encoding_dict=encoding_dict,mode=mode)
                              for fn in filenames])
 
     return doodles

@@ -6,15 +6,10 @@ from trainning import  train_model,load_model_weights,create_scheduler
 from test_metrics import calcul_metric_concours
 
 
-from deeplib.training import validate
-
-
-
-
 import torch.optim as optim
 import torch.nn as nn
 
-from torch.optim.lr_scheduler import  LambdaLR
+
 from torch.utils.data import DataLoader
 
 #Trucs sacred
@@ -28,13 +23,11 @@ experiment_sacred.observers.append(FileStorageObserver.create('my_runs_v_alpha')
 def configuration():
 
     path_data = 'D:/User/William/Documents/Devoir/Projet Deep/data/mini_train/'
-    path_save_model="saves_model/model_info.tar"
+    path_save_model="saves_model/model2_info.tar"
+    path_load_existing_model="saves_model/model_info.tar"
     use_gpu = True
 
-
-
-
-    do_training=False
+    do_training=True
     do_testing=True
 
 
@@ -44,7 +37,7 @@ def configuration():
 
 
 
-    nb_epoch = 3
+    nb_epoch = 7
     batch_size = 32
 
     learning_rate = 0.1
@@ -61,11 +54,12 @@ def configuration():
 
 #Main
 @experiment_sacred.automain
-def main_program(path_data,nb_row_per_classe,
+def main_program(path_data,path_save_model,path_load_existing_model,
                  use_gpu,do_training,do_testing,
+                 nb_row_per_classe,
                  nb_epoch,batch_size,
-                 learning_rate,type_schedule,
-                 path_save_model):
+                 learning_rate,type_schedule
+                 ):
 
 
 
@@ -79,10 +73,7 @@ def main_program(path_data,nb_row_per_classe,
     #Data_set
     size_image_train = 224
     data_train=create_huge_data_set(path_data,nb_rows=nb_row_per_classe,size_image=size_image_train,encoding_dict=enc_dict)
-
     data_valid=create_huge_data_set(path_data,nb_rows=100,size_image=size_image_train,skip_rows=range(1,nb_row_per_classe),encoding_dict=enc_dict)
-    data_test = create_huge_data_set(path_data, nb_rows=100, size_image=size_image_train,skip_rows=range(1, nb_row_per_classe+100), encoding_dict=enc_dict)
-
 
 
 
@@ -106,7 +97,7 @@ def main_program(path_data,nb_row_per_classe,
     #Data loader
     train_loader=DataLoader(data_train,batch_size=batch_size,shuffle=True)
     valid_loader=DataLoader(data_valid,batch_size=batch_size,shuffle=True)
-    test_loader=DataLoader(data_test,batch_size=batch_size)
+
 
 
 
@@ -114,7 +105,7 @@ def main_program(path_data,nb_row_per_classe,
     if do_training:
         train_model(model,train_loader,valid_loader,nb_epoch,
                     scheduler,optimizer,criterion,use_gpu,
-                    path_save=path_save_model)
+                    path_save=path_save_model,path_start_from_existing_model=path_load_existing_model)
 
 
 
@@ -122,12 +113,17 @@ def main_program(path_data,nb_row_per_classe,
 
     #Test
     if do_testing:
-        print("BIDON")
-        model_final,history=load_model_weights(model,path_save_model,type="last",use_gpu=use_gpu,get_history=True)
+        data_test = create_huge_data_set(path_data, nb_rows=100, size_image=size_image_train,
+                                         skip_rows=range(1, nb_row_per_classe + 100), encoding_dict=enc_dict)
+        test_loader = DataLoader(data_test, batch_size=batch_size)
+
+
+
+
+        model_final,history=load_model_weights(model,path_save_model,type="best",use_gpu=use_gpu,get_history=True)
         # history.display()
 
-        acc,loss,score_top3=calcul_metric_concours(model_final,test_loader,use_gpu=use_gpu)
-
+        acc,loss,score_top3=calcul_metric_concours(model_final,test_loader,use_gpu=use_gpu,show_acc_per_class=True)
 
         print("Accuracy test: {}".format(acc))
         print("Score top 3 concours: {}".format(score_top3))
@@ -138,7 +134,7 @@ def main_program(path_data,nb_row_per_classe,
 
 
 
-    pass
+
 
 
 

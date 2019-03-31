@@ -33,6 +33,8 @@ def create_scheduler(start_lr,optimizer,type="constant"):
         schedul=LRPolicy(start_lr=start_lr)
 
 
+
+
     return LambdaLR(optimizer, lr_lambda=schedul)
 
 
@@ -67,37 +69,35 @@ def load_model_weights(model,path_weights,type="best",use_gpu=False,get_history=
 
 
 
-def train_model(model, train_loader,val_loader, n_epoch,scheduler,optimizer,criterion, use_gpu=False, path_save=None):
+def train_model(model, train_loader,val_loader, n_epoch,scheduler,optimizer,criterion, use_gpu=False,
+                path_save=None,path_start_from_existing_model=None):
 
 
-    # if path_save is not None:
-    #     try:
-    #         # Loading state
-    #         checkpoint = torch.load(path_save)
-    #         model.load_state_dict(checkpoint['model_state_dict'])
-    #         optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
-    #         next_epoch = checkpoint['epoch'] + 1
-    #         loss = checkpoint['loss']
-    #         history = checkpoint["history"]
-    #         best_acc = checkpoint["best_acc"]
-    #         best_model_weights = checkpoint["best_model_weights"]
-    #         scheduler.load_state_dict(checkpoint["lr_scheduler_state"])
-    #
-    #         print("Modèle chargé")
-    #
-    #     except:
-    #         best_model_weights = copy.deepcopy(model.state_dict())
-    #         best_acc = 0
-    #         history = History()
-    #         next_epoch = 0
-    #         print("Aucun modèle chargé")
-    #         pass
+    if path_start_from_existing_model is not None:
+
+        # Loading state
+        checkpoint = torch.load(path_start_from_existing_model)
+        model.load_state_dict(checkpoint['model_state_dict'])
+        optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
+        next_epoch = checkpoint['epoch'] + 1
+        loss = checkpoint['loss']
+        history = checkpoint["history"]
+        best_acc = checkpoint["best_acc"]
+        best_model_weights = checkpoint["best_model_weights"]
+        scheduler.load_state_dict(checkpoint["lr_scheduler_state"])
+
+        print("Modèle chargé pour entraînement")
+
+    else:
+        # best_model_weights = copy.deepcopy(model.state_dict())
+        history = History()
+        next_epoch = 0
+        best_acc=0
+        print("Aucun modèle chargé pour entraînement")
 
 
 
-    history = History()
-    next_epoch = 0
-    best_acc=0
+
 
     # Entrainement
     for epoch in range(next_epoch, n_epoch):
@@ -119,6 +119,8 @@ def train_model(model, train_loader,val_loader, n_epoch,scheduler,optimizer,crit
 
         train_acc, train_loss = validate(model, train_loader, use_gpu)
         val_acc, val_loss = validate(model, val_loader, use_gpu)
+
+
 
         #Current LR
         for param_group in optimizer.param_groups:
@@ -156,8 +158,4 @@ def train_model(model, train_loader,val_loader, n_epoch,scheduler,optimizer,crit
 
             print("Epoch {} sauvegardée".format(epoch))
 
-
-    # Return
-    # checkpoint = torch.load(path_save)
-    # model.load_state_dict(checkpoint['best_model_weights'])
 

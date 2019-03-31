@@ -5,10 +5,11 @@ from torch.autograd import Variable
 from data_set_file import DoodlesDataset
 from utility import load_object
 import pandas as pd
+import torch.nn.functional as F
 
 
 
-def prediction_data(loader,path_save_model,use_gpu):
+def prediction_data(loader,path_save_model,use_gpu,get_prob_pred=False):
 
 
     # Model
@@ -23,6 +24,7 @@ def prediction_data(loader,path_save_model,use_gpu):
 
 
     pred_top3=[]
+    pred_top3_prob=[]
     model.eval()
 
     for j, inputs in enumerate(loader):
@@ -41,11 +43,18 @@ def prediction_data(loader,path_save_model,use_gpu):
 
         predictions_top_3 = output.topk(3)[1]
 
-        pred_top3.extend(predictions_top_3.data.cpu().numpy().tolist())
 
+
+
+        pred_top3.extend(predictions_top_3.data.cpu().numpy().tolist())
+        pred_top3_prob.extend(F.softmax(output).topk(3)[0])
 
 
     model.train(True)
+
+    if get_prob_pred:
+        return   pred_top3,pred_top3_prob
+
     return pred_top3
 
 

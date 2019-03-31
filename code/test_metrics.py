@@ -2,15 +2,17 @@ import numpy as np
 import torch.nn as nn
 from sklearn.metrics import accuracy_score
 from torch.autograd import Variable
+from sklearn.metrics import confusion_matrix
+from utility import  load_object
 #inspiré de :
 #https://github.com/benhamner/Metrics/tree/master/Python/ml_metrics
 #https://www.kaggle.com/wendykan/map-k-demo
 
 
 '''
-(1/position_real) 
+(1/position_pred) 
 ex:
-Answer= [1] predicted= [2, 1, 3, 4, 5]
+Answer= [1], predicted= [2, 1, 3, 4, 5]
 AP@5 = 0.5
 
 
@@ -82,9 +84,7 @@ def mapk(actual, predicted, k=3):
     return np.mean([apk(a,p,k) for a,p in zip(actual, predicted)])
 
 
-
-
-def calcul_metric_concours(model, val_loader, use_gpu=True):
+def calcul_metric_concours(model, val_loader, use_gpu=True,show_acc_per_class=False):
     model.train(False)
     true = []
     pred = []
@@ -117,6 +117,17 @@ def calcul_metric_concours(model, val_loader, use_gpu=True):
     top3_score=mapk(true,pred_top3) *100
     acc=accuracy_score(true, pred) * 100
     loss=sum(val_loss) / len(val_loss)
+
+    if show_acc_per_class:
+        conf_mat=confusion_matrix(true,pred)
+        dec_dict=load_object("saves_obj/dec_dict.pk")
+        acc_per_class={}
+        for number,name in dec_dict.items():
+            acc_per_class[name]=conf_mat[number,number]/np.sum(conf_mat[number,:])
+
+
+        print(conf_mat)
+        print(acc_per_class)
 
 
     model.train(True)
