@@ -1,0 +1,9 @@
+data_set_from_image.py permet de lancer une prédiction à partir d'une image
+idéalement faudrait centrer le dessin du UI en haut à gauche
+
+
+analyse_donnees.py permet de voir des dessins randoms
+
+main.py permet d'entraîner le modèle
+
+data_set_file.py contient du code pour créer les data_set
