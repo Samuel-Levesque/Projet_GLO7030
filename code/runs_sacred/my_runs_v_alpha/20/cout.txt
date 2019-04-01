@@ -1,0 +1,10 @@
+Epoch 0 - Train acc: 88.25 - Val acc: 86.00 - Train loss: 0.4062 - Val loss: 0.4736
+Epoch 0 sauvegardée
+Epoch 1 - Train acc: 91.19 - Val acc: 87.75 - Train loss: 0.3063 - Val loss: 0.3625
+Epoch 1 sauvegardée
+Epoch 2 - Train acc: 91.44 - Val acc: 89.50 - Train loss: 0.2812 - Val loss: 0.3711
+Epoch 2 sauvegardée
+Epoch 3 - Train acc: 91.38 - Val acc: 88.75 - Train loss: 0.2479 - Val loss: 0.3439
+Epoch 3 sauvegardée
+Epoch 4 - Train acc: 92.81 - Val acc: 91.25 - Train loss: 0.2191 - Val loss: 0.3157
+Epoch 4 sauvegardée

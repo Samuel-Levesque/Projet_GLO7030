@@ -1,3 +1,0 @@
-BIDON
-Accuracy test:
-Score top 3 concours: 0.9470833333333333

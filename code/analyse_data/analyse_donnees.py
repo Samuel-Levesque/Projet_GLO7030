@@ -72,5 +72,5 @@ def show_random_draw(path,class_name=None,how_many=100,how_many_per_class=1):
 
 
 
-# show_random_draw(path,class_name="ambulance")
-show_random_draw(path,how_many_per_class=2)
+show_random_draw(path,class_name="face")
+# show_random_draw(path,how_many_per_class=2)

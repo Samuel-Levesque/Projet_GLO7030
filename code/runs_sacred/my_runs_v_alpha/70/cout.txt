@@ -1,0 +1,7 @@
+[[91  1  5  3]
+ [ 1 97  1  1]
+ [ 2  1 97  0]
+ [ 3  4  0 93]]
+{'airplane': 0.91, 'alarm_clock': 0.97, 'ambulance': 0.97, 'angel': 0.93}
+Accuracy test: 94.5
+Score top 3 concours: 96.91666666666666

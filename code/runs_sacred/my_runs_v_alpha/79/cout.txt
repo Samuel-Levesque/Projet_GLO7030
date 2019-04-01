@@ -1,0 +1,28 @@
+Aucun modèle chargé pour entraînement
+Epoch 0 - Train acc: 50.83 - Val acc: 48.25 - Train loss: 1.2134 - Val loss: 1.2403
+Epoch 0 sauvegardée
+Epoch 1 - Train acc: 95.17 - Val acc: 91.00 - Train loss: 0.2181 - Val loss: 0.2808
+Epoch 1 sauvegardée
+Epoch 2 - Train acc: 95.17 - Val acc: 90.75 - Train loss: 0.2261 - Val loss: 0.2800
+Epoch 2 sauvegardée
+Epoch 3 - Train acc: 98.67 - Val acc: 95.75 - Train loss: 0.0909 - Val loss: 0.1798
+Epoch 3 sauvegardée
+Epoch 4 - Train acc: 99.00 - Val acc: 95.75 - Train loss: 0.0970 - Val loss: 0.1837
+Epoch 4 sauvegardée
+Epoch 5 - Train acc: 99.17 - Val acc: 94.00 - Train loss: 0.0569 - Val loss: 0.1713
+Epoch 5 sauvegardée
+Epoch 6 - Train acc: 100.00 - Val acc: 96.75 - Train loss: 0.0144 - Val loss: 0.1133
+Epoch 6 sauvegardée
+Epoch 7 - Train acc: 99.50 - Val acc: 95.75 - Train loss: 0.0457 - Val loss: 0.1567
+Epoch 7 sauvegardée
+Epoch 8 - Train acc: 100.00 - Val acc: 96.75 - Train loss: 0.0081 - Val loss: 0.1081
+Epoch 8 sauvegardée
+Epoch 9 - Train acc: 99.08 - Val acc: 95.50 - Train loss: 0.0664 - Val loss: 0.1593
+Epoch 9 sauvegardée
+[[94  0  5  1]
+ [ 2 91  6  1]
+ [ 2  0 97  1]
+ [ 4  3  1 92]]
+{'airplane': 0.94, 'alarm_clock': 0.91, 'ambulance': 0.97, 'angel': 0.92}
+Accuracy test: 93.5
+Score top 3 concours: 96.20833333333334

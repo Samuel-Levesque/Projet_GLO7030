@@ -126,8 +126,10 @@ def calcul_metric_concours(model, val_loader, use_gpu=True,show_acc_per_class=Fa
             acc_per_class[name]=conf_mat[number,number]/np.sum(conf_mat[number,:])
 
 
-        print(conf_mat)
-        print(acc_per_class)
+        model.train(True)
+        return acc,loss,top3_score,conf_mat,acc_per_class
+
+
 
 
     model.train(True)
