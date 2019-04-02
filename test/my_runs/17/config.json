@@ -1,0 +1,11 @@
+{
+  "C": 1.4,
+  "gamma": 0.6,
+  "ma_somme_cool": 5,
+  "objet_cool": {
+    "py/object": "__main__.Mon_objet_cool",
+    "x": 3,
+    "y": 4
+  },
+  "seed": 559138497
+}

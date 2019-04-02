@@ -1,0 +1,17 @@
+bonjour
+1.4
+0.4
+epoch numero 3
+1.0
+1.4
+0.6
+epoch numero 3
+0.9833333333333333
+0.2
+0.4
+epoch numero 3
+0.9833333333333333
+0.2
+0.6
+epoch numero 3
+1.0

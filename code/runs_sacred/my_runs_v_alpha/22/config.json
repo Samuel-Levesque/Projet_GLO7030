@@ -1,0 +1,10 @@
+{
+  "batch_size": 32,
+  "learning_rate": 0.1,
+  "nb_epoch": 10,
+  "nb_row_per_classe": 400,
+  "path_data": "D:/User/William/Documents/Devoir/Projet Deep/data/mini_train/",
+  "path_save_model": "saves_model/model_info.tar",
+  "seed": 108841593,
+  "use_gpu": true
+}

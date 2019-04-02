@@ -1,0 +1,20 @@
+Epoch 0 - Train acc: 66.00 - Val acc: 65.75 - Train loss: 0.9054 - Val loss: 0.9440
+Epoch 0 sauvegardée
+Epoch 1 - Train acc: 86.94 - Val acc: 85.75 - Train loss: 0.4901 - Val loss: 0.5339
+Epoch 1 sauvegardée
+Epoch 2 - Train acc: 87.12 - Val acc: 85.00 - Train loss: 0.4360 - Val loss: 0.4803
+Epoch 2 sauvegardée
+Epoch 3 - Train acc: 90.00 - Val acc: 87.75 - Train loss: 0.3635 - Val loss: 0.4179
+Epoch 3 sauvegardée
+Epoch 4 - Train acc: 90.88 - Val acc: 88.00 - Train loss: 0.3243 - Val loss: 0.3792
+Epoch 4 sauvegardée
+Epoch 5 - Train acc: 91.25 - Val acc: 87.75 - Train loss: 0.3149 - Val loss: 0.3709
+Epoch 5 sauvegardée
+Epoch 6 - Train acc: 91.81 - Val acc: 88.75 - Train loss: 0.2906 - Val loss: 0.3541
+Epoch 6 sauvegardée
+Epoch 7 - Train acc: 91.25 - Val acc: 88.00 - Train loss: 0.2954 - Val loss: 0.3596
+Epoch 7 sauvegardée
+Epoch 8 - Train acc: 91.69 - Val acc: 88.75 - Train loss: 0.2768 - Val loss: 0.3559
+Epoch 8 sauvegardée
+Epoch 9 - Train acc: 93.00 - Val acc: 89.00 - Train loss: 0.2512 - Val loss: 0.3239
+Epoch 9 sauvegardée
