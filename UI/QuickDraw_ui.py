@@ -76,7 +76,7 @@ class QuickDrawUI(QtWidgets.QDialog):
         pixmap.save("image.png", "PNG")
         pixmap_resized.save("image_resized.png", "PNG")
         print("PNG Images saved in folder")
-
+        
 
         # Random predictions graph       
         predictions = ["airplane", "angel", "ambulance"]  # TODO Use model predictions
