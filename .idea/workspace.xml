@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c0e375e1-1475-4b93-93b8-09d5058f337f" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code/data_set_file.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/data_set_file.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/model_creation.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/model_creation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/saves_model/model_4_classes.tar" beforeDir="false" afterPath="$PROJECT_DIR$/code/saves_model/model_4_classes.tar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/trainning.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/trainning.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/saves_model/model_poids_random.tar" beforeDir="false" afterPath="$PROJECT_DIR$/code/saves_model/model_poids_random.tar" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,8 +18,8 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/code/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1162">
-              <caret line="140" selection-start-line="140" selection-end-line="140" />
+            <state relative-caret-position="-255">
+              <caret line="84" column="17" selection-start-line="84" selection-start-column="4" selection-end-line="84" selection-end-column="17" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -69,11 +66,13 @@
       <file leaf-file-name="data_set_file.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/code/data_set_file.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="77" column="8" selection-start-line="77" selection-start-column="8" selection-end-line="77" selection-end-column="8" />
+            <state relative-caret-position="142">
+              <caret line="173" selection-start-line="173" selection-end-line="173" />
               <folding>
-                <element signature="e#443#987#0" />
+                <element signature="e#1044#3560#0" />
                 <element signature="e#4093#4708#0" />
+                <element signature="e#4743#4837#0" />
+                <element signature="e#4872#5999#0" />
               </folding>
             </state>
           </provider>
@@ -142,6 +141,16 @@
               <item name="Projet_GLO7030" type="b2602c69:ProjectViewProjectNode" />
               <item name="code" type="462c0819:PsiDirectoryNode" />
               <item name="analyse_data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Projet_GLO7030" type="b2602c69:ProjectViewProjectNode" />
+              <item name="code" type="462c0819:PsiDirectoryNode" />
+              <item name="runs_sacred" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Projet_GLO7030" type="b2602c69:ProjectViewProjectNode" />
+              <item name="code" type="462c0819:PsiDirectoryNode" />
+              <item name="saves_model" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -289,14 +298,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1874" height="1096" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19375673" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19375673" />
       <window_info anchor="bottom" id="TODO" order="4" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32928064" />
       <window_info anchor="bottom" id="Python Console" order="10" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3566363" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3566363" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -323,17 +331,17 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/code/data_set_file.py</url>
-          <line>237</line>
+          <line>256</line>
           <option name="timeStamp" value="41" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/code/data_set_file.py</url>
-          <line>229</line>
+          <line>248</line>
           <option name="timeStamp" value="45" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/code/data_set_file.py</url>
-          <line>221</line>
+          <line>240</line>
           <option name="timeStamp" value="54" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -348,11 +356,11 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/code/main.py</url>
-          <line>122</line>
+          <line>123</line>
           <option name="timeStamp" value="82" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="87" />
+      <option name="time" value="88" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
@@ -365,12 +373,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test/my_runs/1/cout.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/my_runs/1/run.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/my_runs/1/metrics.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -570,43 +572,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/trainning.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-487">
-          <caret line="79" column="99" selection-start-line="79" selection-start-column="99" selection-end-line="79" selection-end-column="99" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/model_creation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/code/test_metrics.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="567">
           <caret line="114" selection-start-line="114" selection-end-line="114" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/data_set_file.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="77" column="8" selection-start-line="77" selection-start-column="8" selection-end-line="77" selection-end-column="8" />
-          <folding>
-            <element signature="e#443#987#0" />
-            <element signature="e#4093#4708#0" />
           </folding>
         </state>
       </provider>
@@ -635,10 +606,53 @@
         <state relative-caret-position="-765" />
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_remise (1).zip/qlearningAgents.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-969" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_remise (1).zip/valueIterationAgents.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1326" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/model_creation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/trainning.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-487">
+          <caret line="79" column="99" selection-start-line="79" selection-start-column="99" selection-end-line="79" selection-end-column="99" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/data_set_file.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="173" selection-start-line="173" selection-end-line="173" />
+          <folding>
+            <element signature="e#1044#3560#0" />
+            <element signature="e#4093#4708#0" />
+            <element signature="e#4743#4837#0" />
+            <element signature="e#4872#5999#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/code/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1162">
-          <caret line="140" selection-start-line="140" selection-end-line="140" />
+        <state relative-caret-position="-255">
+          <caret line="84" column="17" selection-start-line="84" selection-start-column="4" selection-end-line="84" selection-end-column="17" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
           </folding>

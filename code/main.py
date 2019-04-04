@@ -1,6 +1,6 @@
 from sacred import  Experiment
 from sacred.observers import FileStorageObserver
-from data_set_file import create_huge_data_set,create_encoding_deconding_dict,generate_random_dataset
+from data_set_file import create_huge_data_set,create_encoding_deconding_dict,generate_random_dataset,create_dict_nb_ligne
 from model_creation import create_model
 from trainning import  train_model,load_model_weights,create_scheduler
 from test_metrics import calcul_metric_concours
@@ -80,9 +80,9 @@ def main_program(path_data,path_save_model,path_load_existing_model,path_model_w
     torch.cuda.manual_seed(123)
     torch.cuda.manual_seed_all(123)
 
-    # Label encoding and decoding dicts
+    # Label encoding, decoding dicts, nb_ligne dict
     enc_dict, dec_dict = create_encoding_deconding_dict(path_data)
-
+    nb_ligne_dict=create_dict_nb_ligne(path_data)
 
 
     # Model
@@ -118,6 +118,7 @@ def main_program(path_data,path_save_model,path_load_existing_model,path_model_w
         for i in range(nb_generation_random_dataset_train):
             print("Data set {} utilisé pour entraînement".format(i))
             data_train=generate_random_dataset(path_data,nb_row_class_valid,nb_row_class_test,nb_row_per_classe,
+                                               dict_nb_lignes=nb_ligne_dict,
                                                size_image=size_image_train,encoding_dict=enc_dict)
 
             train_loader = DataLoader(data_train, batch_size=batch_size, shuffle=True)

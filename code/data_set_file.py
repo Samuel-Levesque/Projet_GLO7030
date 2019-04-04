@@ -152,7 +152,7 @@ def create_huge_data_set(path,nb_rows=1000,size_image=224,encoding_dict=None,ski
 
 
 
-def generate_random_dataset( path, nb_row_valid,nb_rows_test,nb_rows, size_image=224, encoding_dict=None,filenames=None):
+def generate_random_dataset( path, nb_row_valid,nb_rows_test,nb_rows,dict_nb_lignes, size_image=224, encoding_dict=None,filenames=None):
     '''
 
     Pour chaque classe dans filenames, on prend nb_rows données aléatoire dans le fichier
@@ -175,7 +175,7 @@ def generate_random_dataset( path, nb_row_valid,nb_rows_test,nb_rows, size_image
     nb_lignes_skip = nb_row_valid + nb_rows_test
     list_dataset=[]
     for fn in filenames:
-        n = sum(1 for line in open(path+fn)) - 1
+        n = dict_nb_lignes[fn]
         skip =list(range(1,nb_lignes_skip)) +sorted(random.sample(range(nb_lignes_skip,n), n - nb_rows-nb_lignes_skip))
         data_set=DoodlesDataset(fn, path, nrows=nb_rows, size=size_image,
                        skiprows=skip, encoding_dict=encoding_dict, mode="train")
@@ -185,6 +185,25 @@ def generate_random_dataset( path, nb_row_valid,nb_rows_test,nb_rows, size_image
 
     return doodles
 
+def create_dict_nb_ligne(path,filenames=None):
+    '''
+    dictionnaire du nombre de ligne dans les fichiers csv
+    :param path:
+    :return:
+    '''
+
+    if filenames==None:
+        filenames = os.listdir(path)
+
+    dict_nb_ligne={}
+
+    for fn in filenames:
+        n = sum(1 for line in open(path + fn)) - 1
+        dict_nb_ligne[fn]=n
+
+    save_object(dict_nb_ligne,"saves_obj/dict_nb_ligne.pk")
+
+    return dict_nb_ligne
 
 
 
