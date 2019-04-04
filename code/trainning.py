@@ -6,7 +6,8 @@ from deeplib.history import History
 import torch
 import copy
 from torch.optim.lr_scheduler import  LambdaLR
-
+import random
+import numpy as np
 
 
 class LRPolicy(object):
@@ -159,3 +160,14 @@ def train_model(model, train_loader,val_loader, n_epoch,scheduler,optimizer,crit
             print("Epoch {} sauvegardée".format(epoch))
 
 
+
+
+
+def boucle_training_data_set_aleatoire():
+    pass
+
+
+
+if __name__ == "__main__":
+    # generate_random_dataset_and_loader(250,100,100)
+    pass

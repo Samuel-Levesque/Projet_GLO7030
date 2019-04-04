@@ -3,364 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="c0e375e1-1475-4b93-93b8-09d5058f337f" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/analyse_data/analyse_donnees.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/analyse_data/analyse_donnees.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/data_set_file.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/data_set_file.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/1/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/1/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/1/metrics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/1/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/10/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/10/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/10/metrics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/10/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/11/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/11/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/11/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/12/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/12/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/12/metrics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/12/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/13/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/13/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/13/metrics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/13/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/14/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/14/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/14/metrics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/14/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/15/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/15/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/15/metrics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/15/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/16/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/16/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/16/metrics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/16/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/17/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/17/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/17/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/18/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/18/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/18/metrics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/18/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/19/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/19/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/19/metrics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/19/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/2/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/2/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/2/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/20/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/20/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/20/metrics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/20/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/21/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/21/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/21/metrics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/21/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/22/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/22/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/22/metrics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/22/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/23/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/23/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/23/metrics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/23/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/24/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/24/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/24/metrics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/24/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/25/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/25/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/25/metrics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/25/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/26/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/26/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/26/metrics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/26/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/27/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/27/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/27/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/28/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/28/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/28/metrics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/28/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/29/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/29/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/29/metrics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/29/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/3/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/3/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/3/metrics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/3/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/30/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/30/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/30/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/31/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/31/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/31/metrics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/31/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/32/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/32/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/32/metrics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/32/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/33/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/33/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/33/metrics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/33/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/34/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/34/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/34/metrics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/34/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/35/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/35/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/35/metrics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/35/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/36/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/36/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/36/metrics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/36/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/37/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/37/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/37/metrics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/37/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/38/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/38/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/38/metrics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/38/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/39/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/39/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/39/metrics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/39/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/4/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/4/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/4/metrics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/4/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/40/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/40/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/40/metrics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/40/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/41/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/41/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/41/metrics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/41/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/42/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/42/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/42/metrics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/42/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/43/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/43/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/43/metrics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/43/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/44/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/44/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/44/metrics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/44/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/45/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/45/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/45/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/46/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/46/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/46/metrics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/46/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/47/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/47/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/47/metrics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/47/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/48/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/48/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/48/metrics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/48/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/49/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/49/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/49/metrics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/49/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/5/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/5/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/5/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/50/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/50/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/50/metrics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/50/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/51/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/51/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/51/metrics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/51/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/52/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/52/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/52/metrics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/52/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/53/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/53/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/53/metrics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/53/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/54/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/54/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/54/metrics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/54/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/55/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/55/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/55/metrics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/55/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/56/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/56/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/56/metrics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/56/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/57/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/57/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/57/metrics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/57/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/58/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/58/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/58/metrics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/58/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/59/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/59/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/59/metrics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/59/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/6/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/6/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/6/metrics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/6/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/60/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/60/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/60/metrics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/60/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/61/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/61/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/61/metrics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/61/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/62/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/62/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/62/metrics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/62/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/63/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/63/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/63/metrics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/63/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/64/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/64/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/64/metrics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/64/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/65/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/65/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/65/metrics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/65/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/66/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/66/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/66/metrics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/66/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/67/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/67/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/67/metrics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/67/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/68/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/68/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/68/metrics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/68/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/69/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/69/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/69/metrics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/69/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/7/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/7/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/7/metrics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/7/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/8/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/8/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/8/metrics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/8/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/9/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/9/cout.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/9/metrics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/9/run.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/__init___d41d8cd98f00b204e9800998ecf8427e.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/data_set_file_1ff36a40fb05c62b3c21114737ad0154.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/data_set_file_2225f8a61d29ddc77f5addb4ff7d494e.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/data_set_file_427248c59aacc719bbcd3363cb81f386.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/data_set_file_4e94e503f3e372ee6612b9794403841f.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/data_set_file_a6bb2eeaa330ea0b46dcdf176b7d495d.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/data_set_file_b9933895389a9ce6240ec2fd34b0abf4.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/data_set_file_c32f02b0d3afa142974600828ee22f00.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/data_set_file_eac73070b888fcb83080a37fe7f67085.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/data_set_file_f42f0e05ec895d9117a7bf43dbc4b553.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/data_set_file_f8a91aa035e70025e96a326ca951a207.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/main_002d28bd559b588b8ef073ad8372fada.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/main_01dbab7f834ac369374cf1cb236a5e34.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/main_02fda9a7c9a3750400698a8f65e1977d.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/main_22381f4ceebe08fa540c4fe6788645d4.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/main_24f813fd7379f8b24ef93352b6707e45.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/main_33463eca5ef4c5efa0010b5c250aba66.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/main_33d4999a077eae01f300e608c71d36f5.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/main_39f07c759e93c5b094453a928ff3638a.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/main_3b7b8f1d7bc585f41b13b95b29d6cb67.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/main_477a248e24d4741a6ccfda5693dcb650.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/main_58b06bdb92c97093fb6672bc16a05835.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/main_5dad465a5b4789aa36759ec46c7808f6.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/main_5f7fdc1ae96c06caa9d0c3d05619972c.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/main_626c8ca6dc34dcc939ac8cb4add0cdaa.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/main_644c60fd8770153f693f86cbf36ef2ce.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/main_64bfb111cd5bc3e872925a54012377e6.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/main_66e49f1aebcb455068e0f023a701534f.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/main_67f592df9d35f5804eb465064d8d8f5a.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/main_6886bf71a99fb6c58cbe2097c931cd1b.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/main_6f81d9bd0996f2f99c5ed264b6f388b9.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/main_70591c237290e102d282c02f284d1d1e.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/main_7251aedf4d979adecd3111ba4dda39cd.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/main_746c5087c493072d655dd2bc40f1b9b7.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/main_80b2356151743c2a250e3f038a98673b.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/main_855694928b2bef09f6ac495637648296.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/main_8e5496759661e265de9d087399f4a520.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/main_8f6ca04447ac6bbafd8699235a8907e1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/main_9031c80a8b0f6562260c8d56f506022f.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/main_9236fd9933bd9c1ce9a34aaa8377a81f.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/main_9bc361ccdc9512e173b49ede5f9b4b72.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/main_9d4181ca973859805992d664b5c9beb5.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/main_a243b155c15274cf05910caf04345bd4.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/main_a715840f266c1ceee1312d1bf2f83e94.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/main_b35e6bdf194111e69149828ba494b79d.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/main_b365b973561a8f42dc8129ea3987fa25.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/main_b3cb9ce5dfdc54a970fec5763c8b1770.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/main_b5f05c1758227763820c2081d17c8118.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/main_b834262b2e87c799d87153a2de111ace.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/main_da2038b8ff13150bcaa95a30eebc3f52.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/main_dc10ca8c923b50f6ebc8347c81567d31.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/main_e67bc8e6240778e2d52f6f4fddece1c6.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/main_ed09fbfeb1c4f1e7512ff2b819759418.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/main_edb6471e36eb7d816c6c27084beb4cb6.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/main_f4cc990ae26e45cc48eb0507e4264658.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/main_f7075d7c2c4e766879ec28b2ef3da10a.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/main_fae18c56bdd6b10f410eed0fc69d296e.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/main_fc0ae04eee342a56eca6f52183176d20.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/model_creation_27dff28afccb346bd8d0d9d399a4f3e3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/model_creation_43a7fd99149f9ec51ec7a7891e4209ab.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/model_creation_76fbabab776618eb858f712e6646d51a.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/model_creation_b4ac61aa7a93cadcf2d80f625ec717d9.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/test_metrics_02d839a72550ebd7ff42b91f565b9667.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/test_metrics_036a7c786e6c6251cfd174596db67710.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/test_metrics_25fe03fc92efbaf9f99e09f3ecb99eec.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/test_metrics_2b9a17a02ff530e84f25052db5b85d4c.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/test_metrics_4168026c66fb75ab15b560d6b299cea6.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/test_metrics_5192f431190acf0ba3ff335fe25d4ce5.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/test_metrics_598fcb86e32d3c486a98a52da77efb8c.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/test_metrics_6ce5728f78ff4cb7492411650dfb7b7c.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/test_metrics_7c20919009c7af8d0dcdc7b0f4a10ff6.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/test_metrics_af8551059d508fc5dae4db5f910b9c62.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/test_metrics_c7618efccae1de4e56d5e476070a9bd3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/test_metrics_c80545985c9662c8ee3ef318828c6cc7.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/test_metrics_e307399be9c8487b50b13112c14dde85.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/test_metrics_fda560bf112e7d6f70f8654a65a6c8e9.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/training_9b616ae65a8df155a8708cffe20ba9a2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/trainning_25eb99fdb6e23bf185587ba84bfcc09d.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/trainning_5b18d189824b60693fe03d70b84d7ea6.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/trainning_75d06119b2efd8440e0594965b1178c6.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/trainning_7a76aae9fd6c788f0dec985160e9409f.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/trainning_a3890c8244e5d77d3da57fd99eb0a3fc.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/trainning_ab8489a95827241fbfc760c2229021b3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/my_runs_v_alpha/_sources/trainning_b7987684407890772e82e237912da39b.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/saves_model/model2_info.tar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/saves_model/model_info.tar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/test_metrics.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/test_metrics.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/saves_model/model_4_classes.tar" beforeDir="false" afterPath="$PROJECT_DIR$/code/saves_model/model_4_classes.tar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/trainning.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/trainning.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -374,8 +20,8 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/code/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-646">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
+            <state relative-caret-position="-759">
+              <caret line="44" column="38" selection-start-line="44" selection-start-column="38" selection-end-line="44" selection-end-column="38" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -386,7 +32,7 @@
       <file leaf-file-name="test_metrics.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/code/test_metrics.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
+            <state relative-caret-position="816">
               <caret line="129" column="35" selection-start-line="129" selection-start-column="35" selection-end-line="129" selection-end-column="57" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
@@ -395,11 +41,26 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="trainning.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/code/trainning.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1173">
+              <caret line="172" column="8" lean-forward="true" selection-start-line="172" selection-start-column="8" selection-end-line="172" selection-end-column="8" />
+              <folding>
+                <element signature="e#0#27#0" expanded="true" />
+                <element signature="e#276#550#0" />
+                <element signature="e#652#770#0" />
+                <element signature="e#1580#4491#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="data_set_file.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/code/data_set_file.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1938">
-              <caret line="138" column="121" selection-start-line="138" selection-start-column="121" selection-end-line="138" selection-end-column="121" />
+            <state relative-caret-position="-62">
+              <caret line="167" column="89" selection-start-line="167" selection-start-column="89" selection-end-line="167" selection-end-column="89" />
               <folding>
                 <element signature="e#443#987#0" />
               </folding>
@@ -419,7 +80,7 @@
       <file leaf-file-name="data_set_from_image.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/code/data_set_from_image.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
+            <state relative-caret-position="850">
               <caret line="62" column="17" selection-start-line="62" selection-start-column="17" selection-end-line="62" selection-end-column="17" />
               <folding>
                 <element signature="e#46#104#0" expanded="true" />
@@ -440,7 +101,7 @@
       <file leaf-file-name="analyse_donnees.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/code/analyse_data/analyse_donnees.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
+            <state relative-caret-position="442">
               <caret line="38" selection-start-line="38" selection-end-line="38" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
@@ -477,15 +138,15 @@
         <option value="$PROJECT_DIR$/code/analyse_donnees.py" />
         <option value="$PROJECT_DIR$/../../t2_deep_code/TP2_GLO7030/src/q4a.py" />
         <option value="$PROJECT_DIR$/code/model_creation.py" />
-        <option value="$PROJECT_DIR$/code/trainning.py" />
         <option value="$PROJECT_DIR$/code/data_set_test.py" />
         <option value="$PROJECT_DIR$/code/utility.py" />
         <option value="$PROJECT_DIR$/code/inference.py" />
-        <option value="$PROJECT_DIR$/code/data_set_file.py" />
         <option value="$PROJECT_DIR$/code/data_set_from_image.py" />
         <option value="$PROJECT_DIR$/code/info_code.txt" />
         <option value="$PROJECT_DIR$/code/analyse_data/analyse_donnees.py" />
         <option value="$PROJECT_DIR$/code/test_metrics.py" />
+        <option value="$PROJECT_DIR$/code/trainning.py" />
+        <option value="$PROJECT_DIR$/code/data_set_file.py" />
         <option value="$PROJECT_DIR$/code/main.py" />
       </list>
     </option>
@@ -536,7 +197,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.trainning">
     <configuration name="analyse_donnees (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Projet_GLO7030" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -591,24 +252,6 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="inference" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Projet_GLO7030" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/code" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/code/inference.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Projet_GLO7030" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -627,20 +270,38 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="trainning" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Projet_GLO7030" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/code" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/code/trainning.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <list>
       <item itemvalue="Python.main" />
-      <item itemvalue="Python.inference" />
       <item itemvalue="Python.data_set_from_image" />
       <item itemvalue="Python.analyse_donnees (1)" />
       <item itemvalue="Python.analyse_donnees" />
+      <item itemvalue="Python.trainning" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.trainning" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.analyse_donnees (1)" />
         <item itemvalue="Python.data_set_from_image" />
         <item itemvalue="Python.analyse_donnees" />
-        <item itemvalue="Python.inference" />
       </list>
     </recent_temporary>
   </component>
@@ -670,7 +331,7 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39918947" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39918947" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -693,23 +354,18 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/code/data_set_file.py</url>
-          <line>211</line>
+          <line>247</line>
           <option name="timeStamp" value="41" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/code/data_set_file.py</url>
-          <line>203</line>
+          <line>239</line>
           <option name="timeStamp" value="45" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/code/data_set_file.py</url>
-          <line>195</line>
+          <line>231</line>
           <option name="timeStamp" value="54" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/code/main.py</url>
-          <line>153</line>
-          <option name="timeStamp" value="55" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/code/test_metrics.py</url>
@@ -722,7 +378,7 @@
           <option name="timeStamp" value="67" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="81" />
+      <option name="time" value="82" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
@@ -735,13 +391,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test/my_runs/6/cout.txt" />
-    <entry file="file://$PROJECT_DIR$/test/my_runs/11/cout.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/my_runs/10/cout.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/my_runs/12/cout.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -802,13 +451,6 @@
     <entry file="file://$PROJECT_DIR$/code/transformation_stroke_image.py" />
     <entry file="file://$PROJECT_DIR$/test/esssai_grid.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://C:/ProgramData/Anaconda3/Lib/random.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="320" selection-start-line="320" selection-end-line="320" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/test5.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -915,13 +557,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/trainning.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-693">
-          <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/code/analyse_donnees.py" />
     <entry file="file://$PROJECT_DIR$/code/data_set_test.py" />
     <entry file="file://$PROJECT_DIR$/code/info_code.txt">
@@ -931,9 +566,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/code/my_runs_v_alpha/79/cout.txt" />
+    <entry file="file://$PROJECT_DIR$/code/my_runs_v_alpha/78/cout.txt" />
+    <entry file="file://$PROJECT_DIR$/code/runs_sacred/model_4_classes/2/cout.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/runs_sacred/model_4_classes/4/cout.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/runs_sacred/model_4_classes/3/cout.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/code/analyse_data/analyse_donnees.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
+        <state relative-caret-position="442">
           <caret line="38" selection-start-line="38" selection-end-line="38" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
@@ -941,21 +591,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/data_set_from_image.py">
+    <entry file="file://C:/ProgramData/Anaconda3/Lib/random.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="62" column="17" selection-start-line="62" selection-start-column="17" selection-end-line="62" selection-end-column="17" />
-          <folding>
-            <element signature="e#46#104#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="290">
+          <caret line="316" selection-start-line="316" selection-end-line="316" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/my_runs_v_alpha/79/cout.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/my_runs_v_alpha/78/cout.txt">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/code/inference.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -964,19 +605,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/data_set_file.py">
+    <entry file="file://$PROJECT_DIR$/code/data_set_from_image.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1938">
-          <caret line="138" column="121" selection-start-line="138" selection-start-column="121" selection-end-line="138" selection-end-column="121" />
+        <state relative-caret-position="850">
+          <caret line="62" column="17" selection-start-line="62" selection-start-column="17" selection-end-line="62" selection-end-column="17" />
           <folding>
-            <element signature="e#443#987#0" />
+            <element signature="e#46#104#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/trainning.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1173">
+          <caret line="172" column="8" lean-forward="true" selection-start-line="172" selection-start-column="8" selection-end-line="172" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+            <element signature="e#276#550#0" />
+            <element signature="e#652#770#0" />
+            <element signature="e#1580#4491#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/code/test_metrics.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
+        <state relative-caret-position="816">
           <caret line="129" column="35" selection-start-line="129" selection-start-column="35" selection-end-line="129" selection-end-column="57" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
@@ -984,10 +638,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/code/data_set_file.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-62">
+          <caret line="167" column="89" selection-start-line="167" selection-start-column="89" selection-end-line="167" selection-end-column="89" />
+          <folding>
+            <element signature="e#443#987#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/code/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-646">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="-759">
+          <caret line="44" column="38" selection-start-line="44" selection-start-column="38" selection-end-line="44" selection-end-column="38" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
           </folding>

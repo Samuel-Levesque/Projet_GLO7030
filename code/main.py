@@ -36,16 +36,26 @@ def configuration():
 
 
 
-    nb_row_per_classe=300
+    nb_row_per_classe = 300
+
+    #pas encore utile
+    nb_row_class_valid=100
+    nb_row_class_test=100
+    skip_test=range(nb_row_class_valid)
+    nb_generation_random_dataset_train=4
 
 
-    nb_epoch = 10
+
+
+    nb_epoch = 3
     batch_size = 32
 
     learning_rate = 0.1
     type_schedule="constant"
 
-    seed=123 #marche pas?
+    seed=123 #marche paas
+
+
 
 
 
@@ -53,7 +63,7 @@ def configuration():
 
 
 #Main
-@experiment_sacred.automain
+@experiment_sacred.main
 def main_program(path_data,path_save_model,path_load_existing_model,path_model_weights_test,
                  use_gpu,do_training,do_testing,
                  nb_row_per_classe,
@@ -64,9 +74,11 @@ def main_program(path_data,path_save_model,path_load_existing_model,path_model_w
 
 
     #Seed
-    torch.manual_seed(seed)
-    np.random.seed(seed)
-    random.seed(seed)
+    torch.manual_seed(123)
+    np.random.seed(123)
+    random.seed(123)
+    torch.cuda.manual_seed(123)
+    torch.cuda.manual_seed_all(123)
 
     # Label encoding and decoding dicts
     enc_dict, dec_dict = create_encoding_deconding_dict(path_data)
@@ -107,6 +119,8 @@ def main_program(path_data,path_save_model,path_load_existing_model,path_model_w
 
     #Train
     if do_training:
+
+
         train_model(model,train_loader,valid_loader,nb_epoch,
                     scheduler,optimizer,criterion,use_gpu,
                     path_save=path_save_model,path_start_from_existing_model=path_load_existing_model)
@@ -142,7 +156,7 @@ def main_program(path_data,path_save_model,path_load_existing_model,path_model_w
 
 
 
-
+experiment_sacred.run()
 
 
 

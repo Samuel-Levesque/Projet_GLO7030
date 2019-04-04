@@ -1,0 +1,91 @@
+{
+  "Test accuracy": {
+    "steps": [
+      0
+    ],
+    "timestamps": [
+      "2019-04-03T18:44:55.852154"
+    ],
+    "values": [
+      89.75
+    ]
+  },
+  "Test accuracy per class": {
+    "steps": [
+      0
+    ],
+    "timestamps": [
+      "2019-04-03T18:44:55.852154"
+    ],
+    "values": [
+      {
+        "airplane": 0.87,
+        "alarm_clock": 0.88,
+        "ambulance": 0.97,
+        "angel": 0.87
+      }
+    ]
+  },
+  "Test confusion matrix": {
+    "steps": [
+      0
+    ],
+    "timestamps": [
+      "2019-04-03T18:44:55.852154"
+    ],
+    "values": [
+      {
+        "dtype": "int64",
+        "py/object": "numpy.ndarray",
+        "values": [
+          [
+            87,
+            6,
+            5,
+            2
+          ],
+          [
+            2,
+            88,
+            7,
+            3
+          ],
+          [
+            1,
+            2,
+            97,
+            0
+          ],
+          [
+            4,
+            4,
+            5,
+            87
+          ]
+        ]
+      }
+    ]
+  },
+  "Test loss": {
+    "steps": [
+      0
+    ],
+    "timestamps": [
+      "2019-04-03T18:44:55.852154"
+    ],
+    "values": [
+      0.36433428067427415
+    ]
+  },
+  "Test score top3": {
+    "steps": [
+      0
+    ],
+    "timestamps": [
+      "2019-04-03T18:44:55.852154"
+    ],
+    "values": [
+      93.875
+    ]
+  }
+}

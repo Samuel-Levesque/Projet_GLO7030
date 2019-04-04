@@ -1,0 +1,10 @@
+Aucun modèle chargé pour entraînement
+Epoch 0 - Train acc: 64.33 - Val acc: 61.25 - Train loss: 1.2188 - Val loss: 1.2322
+Epoch 0 sauvegardée
+Epoch 1 - Train acc: 93.75 - Val acc: 91.25 - Train loss: 0.2658 - Val loss: 0.3215
+Epoch 1 sauvegardée
+Epoch 2 - Train acc: 97.67 - Val acc: 95.50 - Train loss: 0.1342 - Val loss: 0.1972
+Epoch 2 sauvegardée
+Accuracy test: 91.25
+Score top 3 concours: 94.83333333333333
+{'airplane': 0.86, 'alarm_clock': 0.89, 'ambulance': 0.97, 'angel': 0.93}

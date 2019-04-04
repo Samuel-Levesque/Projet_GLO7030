@@ -162,6 +162,42 @@ def create_huge_data_set(path,nb_rows=1000,size_image=224,encoding_dict=None,ski
 
 
 
+def generate_random_dataset( path, nb_row_valid,nb_rows_test,nb_rows=1000, size_image=224, encoding_dict=None,filenames=None):
+    '''
+
+    Pour chaque classe dans filenames, on prend nb_rows données aléatoire dans le fichier
+
+    :param path:
+    :param nb_row_valid:
+    :param nb_rows_test:
+    :param nb_rows:
+    :param size_image:
+    :param encoding_dict:
+    :param filenames:
+    :return:
+    '''
+
+
+    if filenames==None:
+        filenames = os.listdir(path)
+
+
+    nb_lignes_skip = nb_row_valid + nb_rows_test
+    list_dataset=[]
+    for fn in filenames:
+        n = sum(1 for line in open(fn)) - 1
+        skip =list(range(0,nb_lignes_skip)) +sorted(random.sample(range(nb_lignes_skip,n), n - nb_rows-nb_lignes_skip))
+        data_set=DoodlesDataset(fn, path, nrows=nb_rows, size=size_image,
+                       skiprows=skip, encoding_dict=encoding_dict, mode="train")
+        list_dataset.append(data_set)
+
+    doodles = ConcatDataset(list_dataset)
+
+    return doodles
+
+
+
+
 
 def imshow(img_tensor):
 
