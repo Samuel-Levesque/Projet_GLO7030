@@ -17,7 +17,7 @@ def create_model(use_gpu,path_existing_model=None):
 
 
     # if path_existing_model is not None:
-    #     model, history=load_best_model(model,path_existing_model,use_gpu,use_model_last_epoch=True)
+    #     model, history=load_model_weights(model,path_existing_model,use_gpu,type="last")
 
 
     return model

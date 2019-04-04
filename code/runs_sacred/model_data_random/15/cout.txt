@@ -1,0 +1,8 @@
+Data set 0 utilisé pour entraînement
+Modèle chargé pour entraînement
+Epoch 0 - Train acc: 79.38 - Val acc: 78.75 - Train loss: 0.6396 - Val loss: 0.6655
+Epoch 0 sauvegardée
+Epoch 1 - Train acc: 98.25 - Val acc: 93.75 - Train loss: 0.1594 - Val loss: 0.2474
+Epoch 1 sauvegardée
+Data set 1 utilisé pour entraînement
+Modèle chargé pour entraînement

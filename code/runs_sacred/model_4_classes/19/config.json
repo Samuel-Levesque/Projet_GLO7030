@@ -1,0 +1,35 @@
+{
+  "batch_size": 32,
+  "do_testing": true,
+  "do_training": true,
+  "learning_rate": 0.1,
+  "nb_epoch": 3,
+  "nb_generation_random_dataset_train": 4,
+  "nb_row_class_test": 100,
+  "nb_row_class_valid": 100,
+  "nb_row_per_classe": 300,
+  "path_data": "D:/User/William/Documents/Devoir/Projet Deep/data/mini_train/",
+  "path_load_existing_model": null,
+  "path_model_weights_test": "saves_model/model_4_classes.tar",
+  "path_save_model": "saves_model/model_4_classes.tar",
+  "seed": 123,
+  "skip_test": {
+    "py/reduce": [
+      {
+        "py/type": "__builtin__.range"
+      },
+      {
+        "py/tuple": [
+          0,
+          100,
+          1
+        ]
+      },
+      null,
+      null,
+      null
+    ]
+  },
+  "type_schedule": "constant",
+  "use_gpu": true
+}

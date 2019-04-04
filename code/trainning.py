@@ -8,6 +8,7 @@ import copy
 from torch.optim.lr_scheduler import  LambdaLR
 import random
 import numpy as np
+import os.path
 
 
 class LRPolicy(object):
@@ -74,7 +75,9 @@ def train_model(model, train_loader,val_loader, n_epoch,scheduler,optimizer,crit
                 path_save=None,path_start_from_existing_model=None):
 
 
-    if path_start_from_existing_model is not None:
+
+
+    if path_start_from_existing_model is not None and os.path.isfile(path_start_from_existing_model):
 
         # Loading state
         checkpoint = torch.load(path_start_from_existing_model)
@@ -101,7 +104,7 @@ def train_model(model, train_loader,val_loader, n_epoch,scheduler,optimizer,crit
 
 
     # Entrainement
-    for epoch in range(next_epoch, n_epoch):
+    for epoch in range(0, n_epoch):
         model.train()
         scheduler.step()
         for j, batch in enumerate(train_loader):
