@@ -203,7 +203,7 @@ def generate_random_dataset( path, nb_row_valid,nb_rows_test,nb_rows,dict_nb_lig
 
         else:
             new_rows=nb_rows
-        dict_nb_row_used_per_class[fn]=new_rows
+        dict_nb_row_used_per_class[fn[:-4]]=new_rows
 
         data_set=DoodlesDataset(fn, path, nrows=new_rows, size=size_image,
                        skiprows=skip, encoding_dict=encoding_dict, mode="train")
