@@ -1,0 +1,9 @@
+airplane.csv
+alarm clock.csv
+ambulance.csv
+angel.csv
+Aucun dictionnaire d'accuracy par classe trouvé; sampling uniforme utilisé
+Nombre de données d'entraînement (total:800): {'airplane.csv': 200, 'alarm clock.csv': 200, 'ambulance.csv': 200, 'angel.csv': 200}
+Aucun modèle chargé pour entraînement
+Epoch 0 -Train acc: 56.88 -Val acc: 60.25 -Train loss: 1.2735 - Val loss: 1.2670 -Train score top3 : 65.4375 -Val score top3 : 67.3750
+{'airplane': 0.0, 'alarm_clock': 0.86, 'ambulance': 0.63, 'angel': 0.92}

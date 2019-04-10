@@ -1,0 +1,18 @@
+airplane.csv
+alarm clock.csv
+ambulance.csv
+angel.csv
+Data set 0 utilisé pour entraînement
+Aucun modèle chargé pour entraînement
+Epoch 0 -Train acc: 50.38 -Val acc: 50.50 -Train loss: 1.4717 - Val loss: 1.4888 -Train score top3 : 61.8958 -Val score top3 : 62.1667
+{'airplane': 0.0, 'alarm_clock': 0.64, 'ambulance': 0.38, 'angel': 1.0}
+Epoch 1 -Train acc: 92.50 -Val acc: 91.50 -Train loss: 0.4139 - Val loss: 0.4526 -Train score top3 : 95.7083 -Val score top3 : 94.7917
+{'airplane': 0.86, 'alarm_clock': 0.92, 'ambulance': 0.93, 'angel': 0.95}
+Data set 1 utilisé pour entraînement
+Modèle chargé pour entraînement
+Epoch 0 -Train acc: 87.75 -Val acc: 85.75 -Train loss: 0.3735 - Val loss: 0.4483 -Train score top3 : 93.3958 -Val score top3 : 91.4583
+{'airplane': 0.65, 'alarm_clock': 0.87, 'ambulance': 0.97, 'angel': 0.94}
+Epoch 1 -Train acc: 90.12 -Val acc: 87.50 -Train loss: 0.3084 - Val loss: 0.4016 -Train score top3 : 94.3958 -Val score top3 : 92.7083
+{'airplane': 0.74, 'alarm_clock': 0.89, 'ambulance': 0.89, 'angel': 0.98}
+Data set 2 utilisé pour entraînement
+Modèle chargé pour entraînement
