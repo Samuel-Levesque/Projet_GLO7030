@@ -1,0 +1,127 @@
+\documentclass[25pt, a0paper,
+               colspace=15mm, subcolspace=0mm,
+               blockverticalspace=17mm]{tikzposter} % See Section 
+
+\usepackage{graal-poster}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{fontspec}
+
+
+\definecolor{PaleBlue}{rgb}{0,.55,.9}
+\definecolor{PaleGreen}{rgb}{0,.7,.25}
+\definecolor{RedPink}{rgb}{.9,0,.2}
+\definecolor{Pink}{rgb}{.85,.35,.7}
+\definecolor{Purple}{rgb}{.6,0,.75}
+\definecolor{Orange}{rgb}{.9,.3,.05}
+
+\colorlet{attentionColor}{Orange}
+\colorlet{charEmbedColor}{RedPink}
+\colorlet{predEmbedColor}{Pink}
+
+
+\def\pathwidth{2pt}
+\def\nodewidth{3pt}
+\def\cornerCurvature{7pt}
+
+\tikzstyle{embed}=[%
+  draw,
+  #1,
+  % line width=3pt,
+  anchor=north,
+  minimum width=.8cm,
+  minimum height=1.6cm,
+  inner sep=0pt,
+  text=#1!65!black,
+  font=\fontsize{25pt}{24}\selectfont,
+  ]
+
+
+\title{\parbox{\linewidth}{\centering Reconnaissance de dessins manuscrits avec jeu de données Quick, Draw!}}
+\institute{Département d'informatique et de génie logiciel, Université Laval}
+\author{William Bourget, Samuel Lévesque}
+
+
+\begin{document}
+\maketitle
+
+
+
+\begin{columns}
+\column{.4}
+\block{Introduction}{
+
+\input{blocks/introduction}
+
+}
+
+
+\column{0.6}
+\block{Structure du réseau}{
+
+\input{blocks/structure_reseau}
+
+}
+\end{columns}
+
+
+
+
+\begin{columns}
+\column{.2}
+\block[bodyoffsety=37mm, titleoffsety=37mm]{Contraintes}{
+
+\input{blocks/contraintes}
+
+}
+
+
+\column{.8}
+\block[bodyoffsety=0mm, titleoffsety=0mm]{Transformations}{
+
+\input{blocks/transformations}
+
+}
+
+\end{columns}
+
+
+
+
+\begin{columns}
+
+\column{.3}
+\block{Description des données}{
+
+\input{blocks/description_donnees}
+
+}
+
+
+\column{.3}
+\block{Performances}
+{
+
+\input{blocks/performances}
+
+}
+
+
+\column{.4}
+\block{Autre section}
+{
+
+\input{blocks/blabla}
+
+}
+
+
+\block{Conclusion}{
+
+\input{blocks/conclusion}
+
+}
+\end{columns}
+
+\end{document}
