@@ -1,0 +1,26 @@
+We propose a novel way to handle out of vocabulary (OOV) words in downstream natural language processing (NLP) tasks. We implement a network that predicts useful embeddings for OOV words based on their morphology and the context in which they appear.
+
+\vspace{5mm}
+\textbf{Motivations:}
+\begin{itemize}
+  \item OOV words handling in NLP task is an \colorbold{underestimated problem}.
+  % \item Goldberg (2017) emphasizes this fact for NLP tasks such as part of speech tagging (POS) or named entity recognition (NER).
+  \item Few learned, end-to-end, solutions proposed.
+\end{itemize}
+
+\vspace{5mm}
+\textbf{Related work:}
+\begin{itemize}
+  \item Pinter et al. (2017): Predict OOV embedding using the characters.
+  \item Bahdanau et al. (2017): Learn OOV representation from their definition in a dictionary.
+\end{itemize}
+
+\vspace{0mm}
+\textbf{Goals:}
+\begin{itemize}
+  \item Evaluate the impact of OOV words in labeling tasks.
+  \item Provide a more meaningful way to handle OOV words using \colorbold{context} and \colorbold{morphology}.
+  \item Understand when it is important and what is relevant to model OOV embeddings.
+  \item \colorbold{Interpret the predicted embeddings} according to the surrounding linguistic elements.
+  \item Provide a ``drop-in'', ``end-to-end'' module.
+\end{itemize}

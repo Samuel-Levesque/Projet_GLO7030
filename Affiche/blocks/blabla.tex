@@ -1,0 +1,17 @@
+\begin{center}
+\setlength{\tabcolsep}{5mm}
+\begin{tabular}{c c c c c}
+\toprule
+\textbf{Task} & \textbf{Metric} & \textbf{Random Emb.} & \textbf{Our module} & \textbf{Gain}\\
+\midrule
+NER      & F1   & 77.56 & \colorbold{80.62} & 3.9\% \\
+POS      & acc. & 91.41 & \colorbold{92.58} & 1.2\% \\
+% Chunking & acc. & 92.63 & 93.16  & \textbf{93.19} \\
+% Keyphrase& F1   & 37.40 & 39.56 & \textbf{39.77} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\vspace{2.5mm}
+The impact of our model on two NLP downstream tasks. We compare our OOV embeddings prediction scheme against random embeddings.
+\vspace{-12mm}

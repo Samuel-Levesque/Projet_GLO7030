@@ -1,0 +1,24 @@
+\textbf{Set up:}
+\begin{itemize}
+  \item Labeling tasks:
+  \begin{itemize}
+      \item \colorbold{Named Entity Recognition} (NER).
+      \item \colorbold{POS tagging} (POS).
+  \end{itemize}
+  \item Dataset: \colorbold{CoNLL 2003}
+  
+\end{itemize}
+
+\textbf{Training details:}
+\begin{itemize}
+    \item Tensors sizes:
+    \begin{itemize}
+        \item Char. emb.: 20.
+        \item Word emb.: 100 (\colorbold{GloVe}).
+        \item LSTMs hidden state: 128.
+    \end{itemize}
+    \item Context size from 2 words to the whole sentence.
+    \item Standard learning rate on the labeling task parameters, reduced learning rate on Comick using SGD (0.01, 0.001).
+\end{itemize}
+
+\vspace{-.25mm}
