@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 import os
 
 from torch.utils.data import Dataset, DataLoader, ConcatDataset
-from utility import  save_object
+from utility import  save_object,load_object
 
 
 def create_encoding_deconding_dict(path_data):
@@ -29,7 +29,7 @@ def create_encoding_deconding_dict(path_data):
     en_dict = {}
     counter = 0
     for fn in filenames:
-        en_dict[fn[:-4].split('/')[-1].replace(' ', '_')] = counter
+        en_dict[fn[:-4].split('/')[-1]] = counter
         counter += 1
 
     dec_dict = {v: k for k, v in en_dict.items()}
@@ -84,7 +84,7 @@ class DoodlesDataset(Dataset):
 
         if self.mode == 'train':
 
-            self.txt_label= csv_file.replace(' ', '_')[:-4]
+            self.txt_label= csv_file[:-4]
             self.label = encoding_dict[self.txt_label]
 
 
@@ -152,7 +152,8 @@ def create_huge_data_set(path,nb_rows=1000,size_image=224,encoding_dict=None,ski
 
 
 
-def generate_random_dataset( path, nb_row_valid,nb_rows_test,nb_rows,dict_nb_lignes, size_image=224, encoding_dict=None,filenames=None):
+def generate_random_dataset( path, nb_row_valid,nb_rows_test,nb_rows,dict_nb_lignes, size_image=224, encoding_dict=None,filenames=None,
+                             use_acc_proportionate_sampling=False,val_acc_class_save_name=None):
     '''
 
     Pour chaque classe dans filenames, on prend nb_rows données aléatoire dans le fichier
@@ -172,18 +173,50 @@ def generate_random_dataset( path, nb_row_valid,nb_rows_test,nb_rows,dict_nb_lig
         filenames = os.listdir(path)
 
 
+
+
+    if use_acc_proportionate_sampling:
+        if os.path.isfile(val_acc_class_save_name):
+            dict_acc_class=load_object(val_acc_class_save_name)
+        else:
+            print("Aucun dictionnaire d'accuracy par classe trouvé; sampling uniforme utilisé")
+            use_acc_proportionate_sampling=False
+
+
+
+
+
     nb_lignes_skip = nb_row_valid + nb_rows_test
     list_dataset=[]
+
+
+    dict_nb_row_used_per_class={}
+
     for fn in filenames:
         n = dict_nb_lignes[fn]
         skip =list(range(1,nb_lignes_skip)) +sorted(random.sample(range(nb_lignes_skip,n), n - nb_rows-nb_lignes_skip))
-        data_set=DoodlesDataset(fn, path, nrows=nb_rows, size=size_image,
+
+
+        if use_acc_proportionate_sampling:
+            acc=dict_acc_class[fn[:-4]]
+            new_rows=int((1.25-acc)*nb_rows )
+
+        else:
+            new_rows=nb_rows
+        dict_nb_row_used_per_class[fn[:-4]]=new_rows
+
+        data_set=DoodlesDataset(fn, path, nrows=new_rows, size=size_image,
                        skiprows=skip, encoding_dict=encoding_dict, mode="train")
         list_dataset.append(data_set)
 
     doodles = ConcatDataset(list_dataset)
 
+
+    print("Sample données d'entraînement (total:{}):".format(sum(dict_nb_row_used_per_class.values())),dict_nb_row_used_per_class)
+
     return doodles
+
+
 
 def create_dict_nb_ligne(path,filenames=None):
     '''

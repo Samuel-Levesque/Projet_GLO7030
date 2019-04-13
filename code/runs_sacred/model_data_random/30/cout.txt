@@ -1,0 +1,8 @@
+airplane.csv
+alarm clock.csv
+ambulance.csv
+angel.csv
+Nombre de données d'entraînement (total:800): {'airplane.csv': 200, 'alarm clock.csv': 200, 'ambulance.csv': 200, 'angel.csv': 200}
+Aucun modèle chargé pour entraînement
+Epoch 0 -Train acc: 63.75 -Val acc: 65.75 -Train loss: 1.2207 - Val loss: 1.2271 -Train score top3 : 70.0208 -Val score top3 : 70.9167
+{'airplane': 0.0, 'alarm_clock': 0.89, 'ambulance': 0.87, 'angel': 0.87}

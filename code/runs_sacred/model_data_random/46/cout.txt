@@ -1,0 +1,29 @@
+airplane.csv
+alarm clock.csv
+ambulance.csv
+angel.csv
+Aucun dictionnaire d'accuracy par classe trouvé; sampling uniforme utilisé
+Sample données d'entraînement (total:800): {'airplane.csv': 200, 'alarm clock.csv': 200, 'ambulance.csv': 200, 'angel.csv': 200}
+Aucun modèle chargé pour entraînement
+Epoch 0 -Train acc: 55.75 -Val acc: 56.25 -Train loss: 1.4164 - Val loss: 1.4139 -Train score top3 : 65.0625 -Val score top3 : 65.5417
+{'airplane': 0.0, 'alarm clock': 0.78, 'ambulance': 0.48, 'angel': 0.99}
+Epoch 1 -Train acc: 86.62 -Val acc: 86.75 -Train loss: 0.5355 - Val loss: 0.5644 -Train score top3 : 92.1667 -Val score top3 : 91.7917
+{'airplane': 0.74, 'alarm clock': 0.94, 'ambulance': 0.92, 'angel': 0.87}
+Sample données d'entraînement (total:271): {'airplane.csv': 110, 'alarm clock.csv': 43, 'ambulance.csv': 50, 'angel.csv': 68}
+Modèle chargé pour entraînement
+Epoch 0 -Train acc: 95.94 -Val acc: 92.00 -Train loss: 0.2647 - Val loss: 0.3660 -Train score top3 : 97.7245 -Val score top3 : 95.1250
+{'airplane': 0.93, 'alarm clock': 0.87, 'ambulance': 0.98, 'angel': 0.9}
+Epoch 1 -Train acc: 97.79 -Val acc: 92.25 -Train loss: 0.1822 - Val loss: 0.2966 -Train score top3 : 98.7085 -Val score top3 : 95.1667
+{'airplane': 0.93, 'alarm clock': 0.84, 'ambulance': 0.97, 'angel': 0.95}
+Sample données d'entraînement (total:195): {'airplane.csv': 47, 'alarm clock.csv': 78, 'ambulance.csv': 31, 'angel.csv': 39}
+Modèle chargé pour entraînement
+Epoch 0 -Train acc: 54.87 -Val acc: 38.00 -Train loss: 0.9969 - Val loss: 1.4861 -Train score top3 : 70.3419 -Val score top3 : 60.9583
+{'airplane': 0.01, 'alarm clock': 0.99, 'ambulance': 0.0, 'angel': 0.52}
+Epoch 1 -Train acc: 82.56 -Val acc: 79.75 -Train loss: 0.5588 - Val loss: 0.6787 -Train score top3 : 88.3761 -Val score top3 : 85.5417
+{'airplane': 0.41, 'alarm clock': 0.94, 'ambulance': 0.98, 'angel': 0.86}
+Sample données d'entraînement (total:328): {'airplane.csv': 186, 'alarm clock.csv': 43, 'ambulance.csv': 27, 'angel.csv': 72}
+Modèle chargé pour entraînement
+Epoch 0 -Train acc: 98.78 -Val acc: 92.00 -Train loss: 0.1550 - Val loss: 0.3115 -Train score top3 : 99.3394 -Val score top3 : 95.5000
+{'airplane': 0.98, 'alarm clock': 0.95, 'ambulance': 0.83, 'angel': 0.92}
+Epoch 1 -Train acc: 99.39 -Val acc: 92.75 -Train loss: 0.1165 - Val loss: 0.2636 -Train score top3 : 99.6443 -Val score top3 : 95.6667
+{'airplane': 0.94, 'alarm clock': 0.95, 'ambulance': 0.86, 'angel': 0.96}

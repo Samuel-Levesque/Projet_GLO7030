@@ -1,0 +1,18 @@
+airplane.csv
+alarm clock.csv
+ambulance.csv
+angel.csv
+Sample données d'entraînement (total:212): {'airplane.csv': 53, 'alarm clock.csv': 53, 'ambulance.csv': 60, 'angel.csv': 46}
+Aucun modèle chargé pour entraînement
+Epoch 0 -Train acc: 47.17 -Val acc: 46.50 -Train loss: 2.4809 - Val loss: 2.4788 -Train score top3 : 62.6572 -Val score top3 : 64.0417
+{'airplane': 0.03, 'alarm clock': 0.9, 'ambulance': 0.27, 'angel': 0.66}
+Epoch 1 -Train acc: 47.17 -Val acc: 45.25 -Train loss: 1.7102 - Val loss: 1.7180 -Train score top3 : 61.7925 -Val score top3 : 60.3333
+{'airplane': 0.0, 'alarm clock': 0.97, 'ambulance': 0.66, 'angel': 0.18}
+Sample données d'entraînement (total:797): {'airplane.csv': 275, 'alarm clock.csv': 46, 'ambulance.csv': 203, 'angel.csv': 273}
+Modèle chargé pour entraînement
+Epoch 0 -Train acc: 49.53 -Val acc: 58.50 -Train loss: 1.1777 - Val loss: 1.0839 -Train score top3 : 71.2383 -Val score top3 : 75.5417
+{'airplane': 0.02, 'alarm clock': 0.65, 'ambulance': 0.99, 'angel': 0.68}
+Epoch 1 -Train acc: 81.23 -Val acc: 77.00 -Train loss: 0.5162 - Val loss: 0.6656 -Train score top3 : 89.3919 -Val score top3 : 86.5417
+{'airplane': 0.6, 'alarm clock': 0.57, 'ambulance': 0.95, 'angel': 0.96}
+Sample données d'entraînement (total:562): {'airplane.csv': 221, 'alarm clock.csv': 228, 'ambulance.csv': 60, 'angel.csv': 53}
+Modèle chargé pour entraînement

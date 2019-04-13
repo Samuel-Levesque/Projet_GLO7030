@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c0e375e1-1475-4b93-93b8-09d5058f337f" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/code/data_set_file.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/data_set_file.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/saves_model/model_poids_random.tar" beforeDir="false" afterPath="$PROJECT_DIR$/code/saves_model/model_poids_random.tar" afterDir="false" />
-    </list>
+    <list default="true" id="c0e375e1-1475-4b93-93b8-09d5058f337f" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,8 +14,8 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/code/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-255">
-              <caret line="84" column="17" selection-start-line="84" selection-start-column="4" selection-end-line="84" selection-end-column="17" />
+            <state relative-caret-position="357">
+              <caret line="21" column="25" lean-forward="true" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -30,10 +26,24 @@
       <file leaf-file-name="trainning.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/code/trainning.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-487">
-              <caret line="79" column="99" selection-start-line="79" selection-start-column="99" selection-end-line="79" selection-end-column="99" />
+            <state relative-caret-position="357">
+              <caret line="132" selection-start-line="132" selection-end-line="132" />
               <folding>
                 <element signature="e#0#27#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_metrics.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/code/test_metrics.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="465">
+              <caret line="123" selection-start-line="123" selection-end-line="123" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+                <element signature="e#448#1325#0" />
+                <element signature="e#1365#2136#0" />
               </folding>
             </state>
           </provider>
@@ -51,28 +61,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_metrics.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/test_metrics.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="567">
-              <caret line="114" selection-start-line="114" selection-end-line="114" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="data_set_file.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/code/data_set_file.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="173" selection-start-line="173" selection-end-line="173" />
+            <state relative-caret-position="234">
+              <caret line="201" column="25" selection-start-line="201" selection-start-column="25" selection-end-line="201" selection-end-column="25" />
               <folding>
-                <element signature="e#1044#3560#0" />
-                <element signature="e#4093#4708#0" />
-                <element signature="e#4743#4837#0" />
-                <element signature="e#4872#5999#0" />
+                <element signature="e#3726#4341#0" />
               </folding>
             </state>
           </provider>
@@ -114,8 +109,8 @@
         <option value="$PROJECT_DIR$/code/test_metrics.py" />
         <option value="$PROJECT_DIR$/code/model_creation.py" />
         <option value="$PROJECT_DIR$/code/trainning.py" />
-        <option value="$PROJECT_DIR$/code/data_set_file.py" />
         <option value="$PROJECT_DIR$/code/main.py" />
+        <option value="$PROJECT_DIR$/code/data_set_file.py" />
       </list>
     </option>
   </component>
@@ -299,12 +294,12 @@
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1874" height="1096" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19375673" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19375673" />
       <window_info anchor="bottom" id="TODO" order="4" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32928064" />
       <window_info anchor="bottom" id="Python Console" order="10" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3566363" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.45491388" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -331,36 +326,36 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/code/data_set_file.py</url>
-          <line>256</line>
+          <line>291</line>
           <option name="timeStamp" value="41" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/code/data_set_file.py</url>
-          <line>248</line>
+          <line>283</line>
           <option name="timeStamp" value="45" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/code/data_set_file.py</url>
-          <line>240</line>
+          <line>275</line>
           <option name="timeStamp" value="54" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/code/test_metrics.py</url>
-          <line>115</line>
-          <option name="timeStamp" value="66" />
+          <url>file://$PROJECT_DIR$/code/data_set_file.py</url>
+          <line>201</line>
+          <option name="timeStamp" value="89" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/code/test_metrics.py</url>
-          <line>118</line>
-          <option name="timeStamp" value="67" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/code/main.py</url>
           <line>123</line>
-          <option name="timeStamp" value="82" />
+          <option name="timeStamp" value="92" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/code/data_set_file.py</url>
+          <line>37</line>
+          <option name="timeStamp" value="94" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="88" />
+      <option name="time" value="95" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
@@ -373,12 +368,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test/my_runs/1/metrics.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/my_runs/21/metrics.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/my_runs/22/metrics.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -535,9 +524,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="850">
           <caret line="62" column="17" selection-start-line="62" selection-start-column="17" selection-end-line="62" selection-end-column="17" />
-          <folding>
-            <element signature="e#46#104#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -552,9 +538,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="38" selection-start-line="38" selection-end-line="38" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -572,35 +555,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/test_metrics.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="114" selection-start-line="114" selection-end-line="114" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_remise.zip/qlearningAgents.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1020" />
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_remise.zip/analysis.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-459">
-          <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_remise.zip/valueIterationAgents.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1224">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_remise.zip/qlearningAgents.py" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_remise.zip/analysis.py" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_remise.zip/valueIterationAgents.py" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_remise (1).zip/analysis.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-765" />
@@ -616,6 +573,32 @@
         <state relative-caret-position="-1326" />
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/OneDrive/LAVAL/Maitrise/Session_2/Big Data/glo-7027-projet/data/data_description.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="24" column="22" lean-forward="true" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/OneDrive/LAVAL/Maitrise/Session_2/IA/TP/Projet Final AI/Code/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2199">
+          <caret line="165" column="64" lean-forward="true" selection-start-line="165" selection-start-column="64" selection-end-line="165" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/test_metrics.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="123" selection-start-line="123" selection-end-line="123" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#448#1325#0" />
+            <element signature="e#1365#2136#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/code/model_creation.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -628,8 +611,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/code/trainning.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-487">
-          <caret line="79" column="99" selection-start-line="79" selection-start-column="99" selection-end-line="79" selection-end-column="99" />
+        <state relative-caret-position="357">
+          <caret line="132" selection-start-line="132" selection-end-line="132" />
           <folding>
             <element signature="e#0#27#0" expanded="true" />
           </folding>
@@ -638,21 +621,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/code/data_set_file.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="173" selection-start-line="173" selection-end-line="173" />
+        <state relative-caret-position="234">
+          <caret line="201" column="25" selection-start-line="201" selection-start-column="25" selection-end-line="201" selection-end-column="25" />
           <folding>
-            <element signature="e#1044#3560#0" />
-            <element signature="e#4093#4708#0" />
-            <element signature="e#4743#4837#0" />
-            <element signature="e#4872#5999#0" />
+            <element signature="e#3726#4341#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/code/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-255">
-          <caret line="84" column="17" selection-start-line="84" selection-start-column="4" selection-end-line="84" selection-end-column="17" />
+        <state relative-caret-position="357">
+          <caret line="21" column="25" lean-forward="true" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
           </folding>
