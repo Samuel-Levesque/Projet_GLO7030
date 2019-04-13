@@ -1,24 +1,23 @@
-\textbf{Set up:}
+Plusieurs contraintes dans la réalisation de ce projet nous ont empêchées de tester toutes les avenues que nous avions initialement envisagées.
+\textbf{Contraintes computationnelles:}
 \begin{itemize}
-  \item Labeling tasks:
-  \begin{itemize}
-      \item \colorbold{Named Entity Recognition} (NER).
-      \item \colorbold{POS tagging} (POS).
-  \end{itemize}
-  \item Dataset: \colorbold{CoNLL 2003}
-  
+  \item Enjeux de mémoire:
+	  \begin{itemize}
+	      \item Incapacité à charger l'ensemble du jeu de données en \colorbold{mémoire}.
+	      \item Conservation des images en \colorbold{format vectoriel} pour limiter espace de stockage nécessaire.
+	  \end{itemize}
+  \item Enjeux de performance:
+	  \begin{itemize}
+		\item Temps de traitement très important nous limite dans le nombre de modèles et de jeux d'hyperparamètres qu'on peut tester.
+		\item Impossibilité d'entraîner les modèles sur nos postes personnels. Nous devons utiliser des solutions d'\colorbold{infonuagique} qui peuvent être coûteuses et complexe à utiliser avec un jeu de données aussi important.
+	\end{itemize}
 \end{itemize}
 
-\textbf{Training details:}
+\textbf{Contraintes de l'interface graphique:}
 \begin{itemize}
-    \item Tensors sizes:
-    \begin{itemize}
-        \item Char. emb.: 20.
-        \item Word emb.: 100 (\colorbold{GloVe}).
-        \item LSTMs hidden state: 128.
-    \end{itemize}
-    \item Context size from 2 words to the whole sentence.
-    \item Standard learning rate on the labeling task parameters, reduced learning rate on Comick using SGD (0.01, 0.001).
+    \item Perte de l'\colorbold{information temporelle} des images vectorielles.
+    \item Impossibilité d'utiliser \colorbold{différents canaux} pour simuler l'évolution temporelle du dessin.
+	\item Perte de la séparation du dessin par trait.
 \end{itemize}
 
 \vspace{-.25mm}
