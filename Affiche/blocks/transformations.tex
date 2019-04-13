@@ -1,29 +1,82 @@
+
+
+
+
 \vspace{-2mm}
+
+
+
+%\includegraphics[width=0.5\textwidth]{figures/frog_draw_2.png}
+%test texte
+
 \begin{center}
-\Large
-% \resizebox{\textwidth}{!}{%
-\setlength{\tabcolsep}{8pt}
-\begin{tabular}{c c c c c c c c}
-\toprule
-\multirow{2}{*}{\textbf{Entity}} & \multicolumn{3}{c}{\textbf{Ponderation}} & \multirow{2}{*}{\textbf{Examples}}\\
-\cline{2-4}
-\addlinespace[2mm]
-& Word & Left & Right & \\
-\midrule
-\texttt{PER} & 0.19 &  \colorbold{0.49} & 0.32 & \textbf{in sentencing darrel} \underline{\textit{voeks}} , 38 , to a 10-year prison term on thursday\\
-\texttt{PER} & 0.15 &  \colorbold{0.59} & 0.26 &   \textbf{\texttt{<BOS>} australian parliamentarian john} \underline{\textit{langmore}} has formally resigned from his lower house\\
-\texttt{PER} & 0.15 &  \colorbold{0.61} & 0.24 &  had received today \textbf{from mr john vance} \underline{\textit{langmore}} , a letter resigning his place as \\
-\texttt{PER} & 0.15 &  \colorbold{0.69} & 0.16 &  \textbf{\texttt{<BOS>} rtrs - australian mp john} \underline{\textit{langmore}} formally resigns . \texttt{<EOS>}\\
-\texttt{ORG} & 0.22 & \colorbold{0.46} & 0.32 &  the number of plastic surgeries in [...] the \textbf{brazilian plastic surgery society} ( \underline{\textit{sbcp}} ) , said ,\\
-\texttt{ORG} & 0.28 & 0.23 & \colorbold{0.49} &  to increase them in the united states , " \underline{\textit{sbcp}} \textbf{vice-president oswaldo saldanha said}\\
-\texttt{LOC} & 0.16 & 0.22 & \colorbold{0.62} &  some residents of the \underline{\textit{kazanluk}} \textbf{area are moslems who} converted to islam during \\
-\texttt{LOC} & 0.20 & \colorbold{0.47} & 0.33 &  at a mosque in the \textbf{central bulgarian town of} \underline{\textit{kazanluk}} , causing damage but no injuries\\
-\texttt{MISC} & \colorbold{0.68} & 0.11 & 0.21 &  freestyle \textbf{\underline{\textit{skiing-world}}} cup aerials results .\\
-\texttt{MISC} & \colorbold{0.42} & 0.18 & \colorbold{0.40} & the \textbf{\underline{\textit{franco-african}} summit decided to send} a mission bangui [...] civil war .\\
-%0.17 &  0.40 & \colorbold{0.43} &   \textbf{\texttt{<BOS>}} \textit{langmore} \textbf{, 57 , announced in november that}\\
-\bottomrule
-\end{tabular}
+Transformation de vecteurs de position en photos
 \end{center}
+
+\begin{center}
+
+\includegraphics[width=15cm,height=15cm,keepaspectratio]{figures/vecteur_fleche.png}
+\includegraphics[width=15cm,height=15cm,keepaspectratio]{figures/housedraw.png}
+%\captionof{figure}{Transformation des vecteurs }
+\end{center}
+
+
+
+\includegraphics[width=10cm,height=10cm,keepaspectratio]{figures/frog_draw_1.png}
+\includegraphics[width=10cm,height=10cm,keepaspectratio]{figures/frog_draw_2.png} \begin{itemize}
+\item item 1
+\item item 2!
+\end{itemize}
+%\captionof{figure}{Figure caption 1 (left); Figure caption 2 (right)}
+
+
+
+\begin{multicols}{4}
+\includegraphics[width=10cm,height=10cm,keepaspectratio]{figures/frog_draw_1.png}
+\includegraphics[width=10cm,height=10cm,keepaspectratio]{figures/frog_draw_1.png}
+\includegraphics[width=10cm,height=10cm,keepaspectratio]{figures/frog_draw_2.png}
+
+\begin{itemize}
+\item item 1
+\item item 2!
+\end{itemize}
+\end{multicols}
+
+
+
+
+
+\begin{minipage}{0.3\textwidth}% adapt widths of minipages to your needs
+\includegraphics[width=10cm,height=10cm,keepaspectratio]{figures/housedraw.png}
+\end{minipage}%
+
+\begin{minipage}{0.6\textwidth}
+Yesterday,\\
+all my troubles seemed so far away\\
+Now it looks as though they're here to stay\\
+Oh, I believe in yesterday.
+\end{minipage}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \vspace{2mm}
 Qualitative example on several OOV words (underlined). We can see that depending on the context and the target, the weights may shift drastically.

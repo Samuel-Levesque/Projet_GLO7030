@@ -7,3 +7,8 @@ analyse_donnees.py permet de voir des dessins randoms
 main.py permet d'entraîner le modèle
 
 data_set_file.py contient du code pour créer les data_set
+
+
+
+[[[20, 93, 134, 142, 150, 192, 174, 68, 26, 0, 1, 21, 31, 40, 187, 223, 224, 209, 201, 199], [90, 29, 3, 0, 3, 91, 95, 86, 79, 72, 93, 196, 228, 233, 253, 255, 250, 203, 150, 102]],
+[[126, 126, 129, 195], [235, 175, 171, 169]]]
