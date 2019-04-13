@@ -1,0 +1,236 @@
+\documentclass[25pt, a0paper,
+               colspace=15mm, subcolspace=0mm,
+               blockverticalspace=17mm]{tikzposter} % See Section 
+
+\usepackage{graal-poster}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{multicol}
+
+
+\definecolor{PaleBlue}{rgb}{0,.55,.9}
+\definecolor{PaleGreen}{rgb}{0,.7,.25}
+\definecolor{RedPink}{rgb}{.9,0,.2}
+\definecolor{Pink}{rgb}{.85,.35,.7}
+\definecolor{Purple}{rgb}{.6,0,.75}
+\definecolor{Orange}{rgb}{.9,.3,.05}
+
+\colorlet{attentionColor}{Orange}
+\colorlet{charEmbedColor}{RedPink}
+\colorlet{predEmbedColor}{Pink}
+% \colorlet{attentionColor}{GoldUL!90!black}
+% \definecolor{attentionColor}{rgb}{.85,.5,.6}
+
+
+
+\def\pathwidth{2pt}
+\def\nodewidth{3pt}
+\def\cornerCurvature{7pt}
+
+\tikzstyle{embed}=[%
+  draw,
+  #1,
+  % line width=3pt,
+  anchor=north,
+  minimum width=.8cm,
+  minimum height=1.6cm,
+  inner sep=0pt,
+  text=#1!65!black,
+  font=\fontsize{25pt}{24}\selectfont,
+  ]
+
+
+
+
+\title{\parbox{\linewidth}{\centering Predicting and interpreting embeddings for \\ out of vocabulary words in downstream tasks}}
+\institute{Department of Computer Science and Software Engineering, Université Laval}
+\author{Nicolas Garneau\up{\dag}, Jean-Samuel Leboeuf\hspace{5pt}\up{\dag}, Luc Lamontagne}
+
+\begin{document}
+\maketitle
+
+
+\input{test.tex}
+
+
+
+
+
+\begin{columns}
+
+\column{.2}
+
+
+% \block[bodyoffsety=48mm, titleoffsety=48mm]{Experiments}{
+\block[bodyoffsety=37mm, titleoffsety=37mm]{Experiments}{
+
+\textbf{Set up:}
+\begin{itemize}
+  \item Labeling tasks:
+  \begin{itemize}
+      \item \colorbold{Named Entity Recognition} (NER).
+      \item \colorbold{POS tagging} (POS).
+  \end{itemize}
+  \item Dataset: \colorbold{CoNLL 2003}
+  
+%   \item Two nets working together:
+%   \begin{itemize}
+%     \item One predicts OOV embeddings (see OOV handling net section).
+%     \item One predicts tags (see Labeling task section).
+%   \end{itemize}
+  % \item Baseline: randomly generated embeddings for OOV.
+\end{itemize}
+
+
+\textbf{Training details:}
+\begin{itemize}
+    \item Tensors sizes:
+    \begin{itemize}
+        \item Char. emb.: 20.
+        \item Word emb.: 100 (\colorbold{GloVe}).
+        \item LSTMs hidden state: 128.
+    \end{itemize}
+    \item Context size from 2 words to the whole sentence.
+    \item Standard learning rate on the labeling task parameters, reduced learning rate on Comick using SGD (0.01, 0.001).
+\end{itemize}
+
+
+% \textbf{Experiments:}
+% \begin{itemize}
+%   \item Performance gains:
+%   \begin{itemize}
+%     \item Comparison between accuracies for POS.
+%     \item Comparison between F1 scores for NER.
+%   \end{itemize}
+%   \item Interpretability:
+%   \begin{itemize}
+%     \item Comparison of the average weights given to the left context, right context and the words by the network by tags.
+%     \item Qualitative examples of where we observe a shift of attention according to the context.
+%   \end{itemize}
+% \end{itemize}
+
+\vspace{-.25mm}
+
+}
+
+
+  \column{.8}
+  \block[bodyoffsety=0mm, titleoffsety=0mm]{Examples}{
+  \vspace{-2mm}
+  \begin{center}
+  \Large
+  % \resizebox{\textwidth}{!}{%
+  \setlength{\tabcolsep}{8pt}
+  \begin{tabular}{c c c c c c c c}
+  \toprule
+  \multirow{2}{*}{\textbf{Entity}} & \multicolumn{3}{c}{\textbf{Ponderation}} & \multirow{2}{*}{\textbf{Examples}}\\
+  \cline{2-4}
+  \addlinespace[2mm]
+  & Word & Left & Right & \\
+  \midrule
+  \texttt{PER} & 0.19 &  \colorbold{0.49} & 0.32 & \textbf{in sentencing darrel} \underline{\textit{voeks}} , 38 , to a 10-year prison term on thursday\\
+  \texttt{PER} & 0.15 &  \colorbold{0.59} & 0.26 &   \textbf{\texttt{<BOS>} australian parliamentarian john} \underline{\textit{langmore}} has formally resigned from his lower house\\
+  \texttt{PER} & 0.15 &  \colorbold{0.61} & 0.24 &  had received today \textbf{from mr john vance} \underline{\textit{langmore}} , a letter resigning his place as \\
+  \texttt{PER} & 0.15 &  \colorbold{0.69} & 0.16 &  \textbf{\texttt{<BOS>} rtrs - australian mp john} \underline{\textit{langmore}} formally resigns . \texttt{<EOS>}\\
+  \texttt{ORG} & 0.22 & \colorbold{0.46} & 0.32 &  the number of plastic surgeries in [...] the \textbf{brazilian plastic surgery society} ( \underline{\textit{sbcp}} ) , said ,\\
+  \texttt{ORG} & 0.28 & 0.23 & \colorbold{0.49} &  to increase them in the united states , " \underline{\textit{sbcp}} \textbf{vice-president oswaldo saldanha said}\\
+  \texttt{LOC} & 0.16 & 0.22 & \colorbold{0.62} &  some residents of the \underline{\textit{kazanluk}} \textbf{area are moslems who} converted to islam during \\
+  \texttt{LOC} & 0.20 & \colorbold{0.47} & 0.33 &  at a mosque in the \textbf{central bulgarian town of} \underline{\textit{kazanluk}} , causing damage but no injuries\\
+  \texttt{MISC} & \colorbold{0.68} & 0.11 & 0.21 &  freestyle \textbf{\underline{\textit{skiing-world}}} cup aerials results .\\
+  \texttt{MISC} & \colorbold{0.42} & 0.18 & \colorbold{0.40} & the \textbf{\underline{\textit{franco-african}} summit decided to send} a mission bangui [...] civil war .\\
+  %0.17 &  0.40 & \colorbold{0.43} &   \textbf{\texttt{<BOS>}} \textit{langmore} \textbf{, 57 , announced in november that}\\
+  \bottomrule
+  \end{tabular}
+  \end{center}
+  
+  \vspace{2mm}
+  Qualitative example on several OOV words (underlined). We can see that depending on the context and the target, the weights may shift drastically.
+  % \vspace{5.5mm}
+  }
+  
+
+
+
+
+\end{columns}
+
+
+
+
+\begin{columns}
+
+\column{.2}
+
+
+% \block[bodyoffsety=48mm, titleoffsety=48mm]{Experiments}{
+\block[bodyoffsety=0mm, titleoffsety=0mm]{Experiments}{
+
+\textbf{Set up:}
+\begin{itemize}
+  \item Labeling tasks:
+  \begin{itemize}
+      \item \colorbold{Named Entity Recognition} (NER).
+      \item \colorbold{POS tagging} (POS).
+  \end{itemize}
+  \item Dataset: \colorbold{CoNLL 2003}
+  
+%   \item Two nets working together:
+%   \begin{itemize}
+%     \item One predicts OOV embeddings (see OOV handling net section).
+%     \item One predicts tags (see Labeling task section).
+%   \end{itemize}
+  % \item Baseline: randomly generated embeddings for OOV.
+\end{itemize}
+
+
+
+
+
+\vspace{-.25mm}
+
+}
+
+\end{columns}
+
+
+
+\begin{columns}
+
+\column{.2}
+
+
+% \block[bodyoffsety=48mm, titleoffsety=48mm]{Experiments}{
+\block[bodyoffsety=0mm, titleoffsety=0mm]{Experiments}{
+
+\textbf{Set up:}
+\begin{itemize}
+  \item Labeling tasks:
+  \begin{itemize}
+      \item \colorbold{Named Entity Recognition} (NER).
+      \item \colorbold{POS tagging} (POS).
+  \end{itemize}
+  \item Dataset: \colorbold{CoNLL 2003}
+  
+%   \item Two nets working together:
+%   \begin{itemize}
+%     \item One predicts OOV embeddings (see OOV handling net section).
+%     \item One predicts tags (see Labeling task section).
+%   \end{itemize}
+  % \item Baseline: randomly generated embeddings for OOV.
+\end{itemize}
+
+
+
+
+
+\vspace{-.25mm}
+
+}
+
+\end{columns}
+
+
+
+
+
+\end{document}
