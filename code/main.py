@@ -24,7 +24,7 @@ def configuration():
 
     path_data = 'D:/User/William/Documents/Devoir/Projet Deep/data/mini_train/'
 
-    path_save_model="saves_model/model_poids_random.tar"
+    path_save_model="saves_model/model_poids_normal.tar"
     #path_load_existing_model = "saves_model/model_poids_random.tar"
     path_load_existing_model = None
     path_model_weights_test = "saves_model/model_poids_random.tar"
@@ -33,7 +33,7 @@ def configuration():
 
 
     do_training=True
-    do_testing=True
+    do_testing=False
 
 
 
@@ -42,8 +42,8 @@ def configuration():
     nb_row_class_test=100
     skip_test=range(1,nb_row_class_valid)
     nb_generation_random_dataset_train=4
-    use_acc_proportionate_sampling=True
-    val_acc_class_save_name="saves_obj/dict_acc_per_class_valid2.pk"
+    use_acc_proportionate_sampling=False
+    val_acc_class_save_name="saves_obj/dict_acc_per_class_valid3.pk"
 
 
 

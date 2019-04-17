@@ -84,7 +84,7 @@ def mapk(actual, predicted, k=3):
     return np.mean([apk(a,p,k) for a,p in zip(actual, predicted)])
 
 
-def calcul_metric_concours(model, val_loader, use_gpu=True,show_acc_per_class=False):
+def calcul_metric_concours(model, val_loader, use_gpu=True,show_acc_per_class=True):
     model.train(False)
     true = []
     pred = []

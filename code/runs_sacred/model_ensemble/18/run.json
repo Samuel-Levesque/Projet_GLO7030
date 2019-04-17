@@ -1,0 +1,85 @@
+{
+  "artifacts": [],
+  "command": "main_program",
+  "experiment": {
+    "base_dir": "D:\\User\\William\\Documents\\Devoir\\Projet Deep\\Projet_GLO7030\\code",
+    "dependencies": [
+      "numpy==1.15.0",
+      "sacred==0.7.4",
+      "torch==1.0.1"
+    ],
+    "mainfile": "main_ensemble.py",
+    "name": "Doodle_Boys",
+    "repositories": [],
+    "sources": [
+      [
+        "data_set_file.py",
+        "_sources\\data_set_file_9725c710a6c86167d5bb12fbf29e7964.py"
+      ],
+      [
+        "main_ensemble.py",
+        "_sources\\main_ensemble_1361bb5ae87399ba8da479279cc192a0.py"
+      ],
+      [
+        "model_creation.py",
+        "_sources\\model_creation_7a1bf9cfb79ad3af7ab22106ed33d910.py"
+      ],
+      [
+        "test_metrics.py",
+        "_sources\\test_metrics_51a9d4cc92100056f815d05bf365b4f9.py"
+      ],
+      [
+        "trainning.py",
+        "_sources\\trainning_0fad5600f757084f3aaa004c67ec3f20.py"
+      ]
+    ]
+  },
+  "fail_trace": [
+    "Traceback (most recent call last):\n",
+    "  File \"C:\\ProgramData\\Anaconda3\\lib\\site-packages\\sacred\\config\\captured_function.py\", line 46, in captured_function\n    result = wrapped(*args, **kwargs)\n",
+    "  File \"D:/User/William/Documents/Devoir/Projet Deep/Projet_GLO7030/code/main_ensemble.py\", line 138, in main_program\n    val_acc_class_save_name=val_acc_class_save_name)\n",
+    "  File \"D:\\User\\William\\Documents\\Devoir\\Projet Deep\\Projet_GLO7030\\code\\trainning.py\", line 124, in train_model\n    loss.backward()\n",
+    "  File \"C:\\ProgramData\\Anaconda3\\lib\\site-packages\\torch\\tensor.py\", line 102, in backward\n    torch.autograd.backward(self, gradient, retain_graph, create_graph)\n",
+    "  File \"C:\\ProgramData\\Anaconda3\\lib\\site-packages\\torch\\autograd\\__init__.py\", line 90, in backward\n    allow_unreachable=True)  # allow_unreachable flag\n",
+    "RuntimeError: element 0 of tensors does not require grad and does not have a grad_fn\n"
+  ],
+  "heartbeat": "2019-04-17T21:57:26.731169",
+  "host": {
+    "ENV": {},
+    "cpu": "Intel(R) Core(TM) i7-8700 CPU @ 3.20GHz",
+    "hostname": "DESKTOP-04C6VBJ",
+    "os": [
+      "Windows",
+      "Windows-10-10.0.17763-SP0"
+    ],
+    "python_version": "3.7.1"
+  },
+  "meta": {
+    "command": "main_program",
+    "options": {
+      "--beat_interval": null,
+      "--capture": null,
+      "--comment": null,
+      "--debug": false,
+      "--enforce_clean": false,
+      "--file_storage": null,
+      "--force": false,
+      "--help": false,
+      "--loglevel": null,
+      "--mongo_db": null,
+      "--name": null,
+      "--pdb": false,
+      "--print_config": false,
+      "--priority": null,
+      "--queue": false,
+      "--sql": null,
+      "--tiny_db": null,
+      "--unobserved": false
+    }
+  },
+  "resources": [],
+  "result": null,
+  "start_time": "2019-04-17T21:57:23.360941",
+  "status": "FAILED",
+  "stop_time": "2019-04-17T21:57:26.735157"
+}
