@@ -1,0 +1,7 @@
+airplane.csv
+alarm clock.csv
+ambulance.csv
+angel.csv
+Accuracy test: 44.0
+Score top 3 concours: 58.62500000000001
+{'airplane': 0.3, 'alarm clock': 0.5, 'ambulance': 0.54, 'angel': 0.42}
