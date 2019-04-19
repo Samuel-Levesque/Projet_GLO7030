@@ -13,6 +13,8 @@ from matplotlib.backends.backend_qt4agg import FigureCanvasQTAgg as FigureCanvas
 from data_set_from_image import predict_image_classes
 from utility import load_object
 import pickle
+import cv2
+import PyQt5 as Qt
 
 
 class QuickDrawUI(QtWidgets.QDialog):
@@ -76,10 +78,14 @@ class QuickDrawUI(QtWidgets.QDialog):
 
     def PredictImage(self):
         pixmap = self.DrawingFrame.grab()
-        pixmap_resized = pixmap.scaled(self.predict_image_size, self.predict_image_size)
+        pixmap.save("temp_image/pixmap_image.png", "PNG")
+        opencv_image = cv2.imread("temp_image/pixmap_image.png", 0)
+        centered_cv_image = self.center_cv_image(opencv_image)
+        centered_pixmap = QtGui.QPixmap(r"temp_image/centered_image.png")
+        pixmap_resized = centered_pixmap.scaled(self.predict_image_size, self.predict_image_size, aspectRatioMode=QtCore.Qt.KeepAspectRatio)
 
-#        pixmap.save("image.png", "PNG")
         pixmap_resized.save("UI/image/image_resized.png", "PNG")
+        print(pixmap_resized.size)
         print("PNG Images saved in folder")
 
         predictions, predictions_confidence = predict_image_classes(path_image_folder="UI/",
@@ -113,26 +119,32 @@ class QuickDrawUI(QtWidgets.QDialog):
         palette.setColor(widget.backgroundRole(), QtCore.Qt.white)
         widget.setPalette(palette)
 
+    def center_cv_image(self, opencv_image):
+
+        th, threshed = cv2.threshold(opencv_image, 240, 255, cv2.THRESH_BINARY_INV)
+
+        ## (2) Morph-op to remove noise
+        kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (11,11))
+        morphed = cv2.morphologyEx(threshed, cv2.MORPH_CLOSE, kernel)
+
+        ## (3) Find the max-area contour
+        cnts = cv2.findContours(morphed[1:-1, 1:-1], cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)[-2]
+        cnt = sorted(cnts, key=cv2.contourArea)[-1]
+
+        ## (4) Crop and save it
+        x,y,w,h = cv2.boundingRect(cnt)
+        y += 1
+        x += 1
+        dst = opencv_image[y:y+h, x:x+w]
+
+        cv2.imwrite("temp_image/centered_image.png", dst)
+
 
 
 if __name__ == '__main__':
     import os
     os.chdir('/Users/Samuel_Levesque/Documents/GitHub/Projet_GLO7030/code')
 
-    path_image_folder = "UI/"
-#    path_image_folder = "/Users/Samuel_Levesque/Documents/GitHub/Projet_GLO7030/code/UI/"
-    path_save_model = "modele/model_poids_mauvaise_classes_sampling.tar"
-    decoding_dict = load_object("saves_obj/dict_acc_per_class_valid_model_ensemble.pk")
-    use_gpu = False
-
-    with open("saves_obj/full_decoding_dict.pickle", 'rb') as handle:
-        decoding_dict = pickle.load(handle)
-
-    test_label, test_probs = predict_image_classes(path_image_folder,
-                                                   path_save_model,
-                                                   use_gpu,
-                                                   decoding_dict,
-                                                   file_number=1)
 
     app = QtWidgets.QApplication(sys.argv)
     window = QuickDrawUI()
