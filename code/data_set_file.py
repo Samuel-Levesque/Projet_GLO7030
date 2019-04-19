@@ -253,49 +253,61 @@ def imshow(img_tensor):
 
 if __name__ == "__main__":
 
-    path = 'D:/User/William/Documents/Devoir/Projet Deep/data/mini_train/'
-    # path = 'D:/User/William/Documents/Devoir/Projet Deep/data/train_simplified/'
+#    path = 'D:/User/William/Documents/Devoir/Projet Deep/data/mini_train/'
+#    # path = 'D:/User/William/Documents/Devoir/Projet Deep/data/train_simplified/'
+#
+#    filenames = os.listdir(path)
+#    filenames = [path + x for x in filenames]
+#
+#    size_image = 224
+#
+#    select_nrows = 1000
+#
+#
+#    csv_file=filenames[0].split('/')[-1]
+#
+#    #Créer data set pour un csv file en particulier
+#    # essai=DoodlesDataset(csv_file, path,nrows=select_nrows, size=size_image,skiprows=range(1,10))
+#
+#
+#
+#
+#
+#
+#    # loader=DataLoader(essai,batch_size=10)
+#    # for image, label in loader:
+#    #     print(image)
+#    #     t1=image[0,0,:,:]
+#    #     #imshow(t1)
+#    #     print(label)
+#
+#
+#    doodles = ConcatDataset([DoodlesDataset(fn.split('/')[-1], path,
+#                                               nrows=select_nrows, size=size_image) for fn in filenames])
+#
+#    loader = DataLoader(doodles, batch_size=2,shuffle=True)
+#
+#    i=0
+#    for image, label in loader:
+#        # print(image)
+#        t1 = image[0, 0, :, :]
+#        t2=image[1,0,:,:]
+#        # imshow(t1)
+#        # imshow(t2)
+#        i+=2
+#        print(i)
+#        print(label)
+#
+#    print("end")
 
-    filenames = os.listdir(path)
-    filenames = [path + x for x in filenames]
+    path_data = r"/Users/Samuel_Levesque/datasets/train_simplified/"
 
-    size_image = 224
+    enc_dict, dec_dict = create_encoding_deconding_dict(path_data)
 
-    select_nrows = 1000
+    import pickle
 
+    with open('full_encoding_dict.pickle', 'wb') as handle:
+        pickle.dump(enc_dict, handle, protocol=pickle.HIGHEST_PROTOCOL)
 
-    csv_file=filenames[0].split('/')[-1]
-
-    #Créer data set pour un csv file en particulier
-    # essai=DoodlesDataset(csv_file, path,nrows=select_nrows, size=size_image,skiprows=range(1,10))
-
-
-
-
-
-
-    # loader=DataLoader(essai,batch_size=10)
-    # for image, label in loader:
-    #     print(image)
-    #     t1=image[0,0,:,:]
-    #     #imshow(t1)
-    #     print(label)
-
-
-    doodles = ConcatDataset([DoodlesDataset(fn.split('/')[-1], path,
-                                               nrows=select_nrows, size=size_image) for fn in filenames])
-
-    loader = DataLoader(doodles, batch_size=2,shuffle=True)
-
-    i=0
-    for image, label in loader:
-        # print(image)
-        t1 = image[0, 0, :, :]
-        t2=image[1,0,:,:]
-        # imshow(t1)
-        # imshow(t2)
-        i+=2
-        print(i)
-        print(label)
-
-    print("end")
+    with open('full_decoding_dict.pickle', 'wb') as handle:
+        pickle.dump(dec_dict, handle, protocol=pickle.HIGHEST_PROTOCOL)
