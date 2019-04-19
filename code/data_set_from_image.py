@@ -10,7 +10,11 @@ from utility import load_object
 import time
 
 
-def predict_image_classes(path_image_folder,path_save_model,use_gpu,decoding_dict,file_number=1):
+def predict_image_classes(path_image_folder,
+                          path_save_model,
+                          use_gpu,
+                          decoding_dict,
+                          file_number=1):
     '''
     Permet de renvoyer une list top 3 prédit à partir d'une image png.
 
@@ -40,15 +44,15 @@ def predict_image_classes(path_image_folder,path_save_model,use_gpu,decoding_dic
     loader = DataLoader(data_set, batch_size=1)
 
     # pred=prediction_data(loader,path_save_model,use_gpu)[0]
-    list_pred,list_tensor_prob=prediction_data(loader,path_save_model,use_gpu,get_prob_pred=True)
+    list_pred, list_tensor_prob = prediction_data(loader,path_save_model,use_gpu,get_prob_pred=True)
 
 
-    pred=list_pred[file_number-1]
-    prob=list_tensor_prob[file_number-1].data.numpy()*100
+    pred = list_pred[file_number-1]
+    prob = list_tensor_prob[file_number-1].data.numpy()
 
 
 
-    pred_string=[decoding_dict[element] for element in pred]
+    pred_string = [decoding_dict[element] for element in pred]
 
     return pred_string,prob
 
