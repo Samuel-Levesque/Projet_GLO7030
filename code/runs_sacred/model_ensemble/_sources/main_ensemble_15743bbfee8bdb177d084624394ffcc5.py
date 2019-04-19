@@ -37,7 +37,7 @@ def configuration():
     use_gpu = True
 
 
-    do_training=False
+    do_training=True
     do_testing=True
 
 
@@ -154,7 +154,6 @@ def main_program(path_data,path_save_model,path_load_existing_model,path_model_w
         history.display()
 
         acc,loss,score_top3,conf_mat,acc_per_class=calcul_metric_concours(model_final,test_loader,use_gpu=use_gpu,show_acc_per_class=True)
-
 
         print("Accuracy test: {}".format(acc))
         print("Score top 3 concours: {}".format(score_top3))
