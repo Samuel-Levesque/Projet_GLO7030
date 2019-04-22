@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c0e375e1-1475-4b93-93b8-09d5058f337f" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/code/main_ensemble.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/main_ensemble.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/model_creation.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/model_creation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/saves_model/model_poids_ensemble.tar" beforeDir="false" afterPath="$PROJECT_DIR$/code/saves_model/model_poids_ensemble.tar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/saves_obj/dict_acc_per_class_valid_ensemble.pk" beforeDir="false" afterPath="$PROJECT_DIR$/code/saves_obj/dict_acc_per_class_valid_ensemble.pk" afterDir="false" />
-    </list>
+    <list default="true" id="c0e375e1-1475-4b93-93b8-09d5058f337f" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,17 +26,17 @@
       <file leaf-file-name="main_ensemble.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/code/main_ensemble.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-11">
+            <state relative-caret-position="51">
               <caret line="3" column="54" selection-start-line="3" selection-start-column="54" selection-end-line="3" selection-end-column="55" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main_moyenne.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main_moyenne.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/code/main_moyenne.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="782">
-              <caret line="46" column="25" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
+            <state relative-caret-position="1581">
+              <caret line="93" column="35" selection-start-line="93" selection-start-column="10" selection-end-line="93" selection-end-column="35" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
                 <element signature="e#3313#4335#0" />
@@ -53,8 +48,8 @@
       <file leaf-file-name="model_creation.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/code/model_creation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="499">
-              <caret line="50" selection-start-line="50" selection-end-line="50" />
+            <state relative-caret-position="612">
+              <caret line="86" column="85" selection-start-line="86" selection-start-column="75" selection-end-line="86" selection-end-column="85" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
                 <element signature="e#207#692#0" />
@@ -65,7 +60,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="analyse_donnees.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="analyse_donnees.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/code/analyse_data/analyse_donnees.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
@@ -620,16 +615,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/analyse_data/analyse_donnees.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/code/trainning.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="91">
@@ -650,17 +635,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/code/main_moyenne.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1581">
+          <caret line="93" column="35" selection-start-line="93" selection-start-column="10" selection-end-line="93" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+            <element signature="e#3313#4335#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/code/main_ensemble.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-11">
+        <state relative-caret-position="51">
           <caret line="3" column="54" selection-start-line="3" selection-start-column="54" selection-end-line="3" selection-end-column="55" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/code/model_creation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="499">
-          <caret line="50" selection-start-line="50" selection-end-line="50" />
+        <state relative-caret-position="612">
+          <caret line="86" column="85" selection-start-line="86" selection-start-column="75" selection-end-line="86" selection-end-column="85" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
             <element signature="e#207#692#0" />
@@ -670,13 +666,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/main_moyenne.py">
+    <entry file="file://$PROJECT_DIR$/code/analyse_data/analyse_donnees.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="46" column="25" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
+        <state relative-caret-position="153">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
           <folding>
-            <element signature="e#0#30#0" expanded="true" />
-            <element signature="e#3313#4335#0" />
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
