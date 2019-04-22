@@ -54,19 +54,24 @@ class Model_Ensemble(nn.Module):
 
 
 class Model_Ensemble_moyenne(nn.Module):
-    def __init__(self, list_model_saves_path,use_gpu=True):
+    def __init__(self, list_models):
         super(Model_Ensemble_moyenne, self).__init__()
 
-        model = create_model(use_gpu)
-        self.model_0 = load_model_weights(model, list_model_saves_path[0], use_gpu=use_gpu)
-        model = create_model(use_gpu)
-        self.model_1 = load_model_weights(model, list_model_saves_path[1], use_gpu=use_gpu)
+
+        self.nb_model=len(list_models)
+        self.list_models =list_models
 
 
+
+        self.classifier = nn.Linear(self.nb_model*340, 340)
 
     def forward(self, x):
+        list_output = []
+        for model in self.list_models:
+            output = model(x)
+            list_output.append(output)
 
-        y=(self.model_0(x) +self.model_1(x))/2
+        y=list_output[0]+list_output[1]
 
 
 
@@ -89,18 +94,7 @@ def create_ensemble_model(list_model_saves_path,use_gpu,frezze_all=True  ):
             model.cuda()
         list_model.append(model)
 
-    model_ensemble=Model_Ensemble(list_model)
-    return model_ensemble
-
-
-
-def create_ensemble_model_moy(list_model_saves_path,use_gpu):
-
-
-
-    model_ensemble = Model_Ensemble_moyenne(list_model_saves_path,use_gpu)
-    if use_gpu:
-        model_ensemble.cuda()
+    model_ensemble=Model_Ensemble_moyenne(list_model)
     return model_ensemble
 
 

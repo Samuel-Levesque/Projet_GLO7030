@@ -66,7 +66,7 @@ class Model_Ensemble_moyenne(nn.Module):
 
     def forward(self, x):
 
-        y=(self.model_0(x) +self.model_1(x))/2
+        y=self.model_0(x)
 
 
 
@@ -94,15 +94,13 @@ def create_ensemble_model(list_model_saves_path,use_gpu,frezze_all=True  ):
 
 
 
-def create_ensemble_model_moy(list_model_saves_path,use_gpu):
+def create_ensemble_model_moy(list_model_saves_path,use_gpu,frezze_all=True  ):
 
 
 
-    model_ensemble = Model_Ensemble_moyenne(list_model_saves_path,use_gpu)
-    if use_gpu:
-        model_ensemble.cuda()
+    model_ensemble = Model_Ensemble(list_model_saves_path,use_gpu)
     return model_ensemble
-
+    pass
 
 
 

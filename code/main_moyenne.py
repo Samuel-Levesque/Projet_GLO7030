@@ -1,7 +1,7 @@
 from sacred import  Experiment
 from sacred.observers import FileStorageObserver
 from data_set_file import create_huge_data_set,create_encoding_deconding_dict,generate_random_dataset,create_dict_nb_ligne
-from model_creation import create_model
+from model_creation import create_model,create_ensemble_model,create_ensemble_model_moy
 from trainning import  train_model,load_model_weights,create_scheduler
 from test_metrics import calcul_metric_concours
 
@@ -14,7 +14,7 @@ from torch.utils.data import DataLoader
 
 #Trucs sacred
 experiment_sacred=Experiment("Doodle_Boys")
-experiment_sacred.observers.append(FileStorageObserver.create('runs_sacred/model_data_random'))
+experiment_sacred.observers.append(FileStorageObserver.create('runs_sacred/model_ensemble'))
 
 
 
@@ -24,10 +24,15 @@ def configuration():
 
     path_data = 'D:/User/William/Documents/Devoir/Projet Deep/data/mini_train/'
 
-    path_save_model="saves_model/model_poids_normal.tar"
+    path_save_model="saves_model/model_poids_ensemble.tar"
     #path_load_existing_model = "saves_model/model_poids_random.tar"
     path_load_existing_model = None
-    path_model_weights_test = "saves_model/model_poids_random.tar"
+    path_model_weights_test = "saves_model/model_poids_ensemble.tar"
+
+    list_path_model_ensemble=["saves_model/model_poids_random.tar",
+                              "saves_model/model_poids_normal.tar"
+                              ]
+
 
     use_gpu = True
 
@@ -41,14 +46,14 @@ def configuration():
     nb_row_class_valid=100
     nb_row_class_test=100
     skip_test=range(1,nb_row_class_valid)
-    nb_generation_random_dataset_train=4
+    nb_generation_random_dataset_train=1
     use_acc_proportionate_sampling=False
-    val_acc_class_save_name="saves_obj/dict_acc_per_class_valid3.pk"
+    val_acc_class_save_name="saves_obj/dict_acc_per_class_valid_ensemble.pk"
 
 
 
 
-    nb_epoch = 2
+    nb_epoch = 4
     batch_size = 32
 
     learning_rate = 0.1
@@ -66,6 +71,7 @@ def configuration():
 #Main
 @experiment_sacred.main
 def main_program(path_data,path_save_model,path_load_existing_model,path_model_weights_test,
+                 list_path_model_ensemble,
                  use_gpu,do_training,do_testing,
                  nb_row_per_classe,nb_generation_random_dataset_train,
                  nb_row_class_valid,nb_row_class_test,skip_test,
@@ -77,12 +83,6 @@ def main_program(path_data,path_save_model,path_load_existing_model,path_model_w
                  ):
 
 
-    #Seed
-    # torch.manual_seed(123)
-    # np.random.seed(123)
-    # random.seed(123)
-    # torch.cuda.manual_seed(123)
-    # torch.cuda.manual_seed_all(123)
 
     # Label encoding, decoding dicts, nb_ligne dict
     enc_dict, dec_dict = create_encoding_deconding_dict(path_data)
@@ -90,7 +90,8 @@ def main_program(path_data,path_save_model,path_load_existing_model,path_model_w
 
 
     # Model
-    model = create_model(use_gpu)
+    # model = create_model(use_gpu)
+    model=create_ensemble_model_moy(list_path_model_ensemble,use_gpu)
 
     if use_gpu:
         model.cuda()
@@ -149,10 +150,13 @@ def main_program(path_data,path_save_model,path_load_existing_model,path_model_w
 
 
 
-        model_final,history=load_model_weights(model,path_model_weights_test,type="best",use_gpu=use_gpu,get_history=True)
-        history.display()
+        #model_final,history=load_model_weights(model,path_model_weights_test,type="best",use_gpu=use_gpu,get_history=True)
+
+        model_final=create_ensemble_model_moy(list_path_model_ensemble,use_gpu)
+        #history.display()
 
         acc,loss,score_top3,conf_mat,acc_per_class=calcul_metric_concours(model_final,test_loader,use_gpu=use_gpu,show_acc_per_class=True)
+
 
         print("Accuracy test: {}".format(acc))
         print("Score top 3 concours: {}".format(score_top3))
