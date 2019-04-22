@@ -46,9 +46,8 @@ class Model_Ensemble(nn.Module):
 
     def forward(self, x):
         list_output = []
-        list_output.append(self.model_0(x))
-        list_output.append(self.model_1(x))
-
+        list_output[0]=self.model_0(x)
+        list_output[1]=self.model_1(x)
 
         x = torch.cat(list_output, dim=1)
         x = self.classifier(x)

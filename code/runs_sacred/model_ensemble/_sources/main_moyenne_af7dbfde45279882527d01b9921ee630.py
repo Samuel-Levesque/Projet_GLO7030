@@ -37,14 +37,14 @@ def configuration():
     use_gpu = True
 
 
-    do_training=True
+    do_training=False
     do_testing=True
 
 
 
     nb_row_per_classe = 250
     nb_row_class_valid=100
-    nb_row_class_test=100
+    nb_row_class_test=50
     skip_test=range(1,nb_row_class_valid)
     nb_generation_random_dataset_train=1
     use_acc_proportionate_sampling=False
@@ -91,7 +91,7 @@ def main_program(path_data,path_save_model,path_load_existing_model,path_model_w
 
     # Model
     # model = create_model(use_gpu)
-    model=create_ensemble_model(list_path_model_ensemble,use_gpu)
+    model=create_ensemble_model_moy(list_path_model_ensemble,use_gpu)
 
     if use_gpu:
         model.cuda()
@@ -150,8 +150,10 @@ def main_program(path_data,path_save_model,path_load_existing_model,path_model_w
 
 
 
-        model_final,history=load_model_weights(model,path_model_weights_test,type="best",use_gpu=use_gpu,get_history=True)
-        history.display()
+        #model_final,history=load_model_weights(model,path_model_weights_test,type="best",use_gpu=use_gpu,get_history=True)
+
+        model_final=create_ensemble_model_moy(list_path_model_ensemble,use_gpu)
+        #history.display()
 
         acc,loss,score_top3,conf_mat,acc_per_class=calcul_metric_concours(model_final,test_loader,use_gpu=use_gpu,show_acc_per_class=True)
 

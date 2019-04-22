@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c0e375e1-1475-4b93-93b8-09d5058f337f" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/UI/QuickDraw_ui.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/UI/QuickDraw_ui.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/UI/image/image_resized.png" beforeDir="false" afterPath="$PROJECT_DIR$/code/UI/image/image_resized.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code/main_ensemble.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/main_ensemble.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code/model_creation.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/model_creation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/saves_obj/dec_dict.pk" beforeDir="false" afterPath="$PROJECT_DIR$/code/saves_obj/dec_dict.pk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/saves_obj/en_dict.pk" beforeDir="false" afterPath="$PROJECT_DIR$/code/saves_obj/en_dict.pk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/temp_image/centered_image.png" beforeDir="false" afterPath="$PROJECT_DIR$/code/temp_image/centered_image.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/temp_image/pixmap_image.png" beforeDir="false" afterPath="$PROJECT_DIR$/code/temp_image/pixmap_image.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/saves_model/model_poids_ensemble.tar" beforeDir="false" afterPath="$PROJECT_DIR$/code/saves_model/model_poids_ensemble.tar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/saves_obj/dict_acc_per_class_valid_ensemble.pk" beforeDir="false" afterPath="$PROJECT_DIR$/code/saves_obj/dict_acc_per_class_valid_ensemble.pk" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -37,11 +31,8 @@
       <file leaf-file-name="main_ensemble.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/code/main_ensemble.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2199">
-              <caret line="157" selection-start-line="157" selection-end-line="157" />
-              <folding>
-                <element signature="e#0#30#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-11">
+              <caret line="3" column="54" selection-start-line="3" selection-start-column="54" selection-end-line="3" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -49,8 +40,8 @@
       <file leaf-file-name="main_moyenne.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/code/main_moyenne.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-204">
-              <caret line="41" selection-start-line="41" selection-end-line="41" />
+            <state relative-caret-position="782">
+              <caret line="46" column="25" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
                 <element signature="e#3313#4335#0" />
@@ -62,11 +53,13 @@
       <file leaf-file-name="model_creation.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/code/model_creation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="82" lean-forward="true" selection-start-line="82" selection-end-line="82" />
+            <state relative-caret-position="499">
+              <caret line="50" selection-start-line="50" selection-end-line="50" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
                 <element signature="e#207#692#0" />
+                <element signature="e#1257#1728#0" />
+                <element signature="e#2334#2430#0" />
               </folding>
             </state>
           </provider>
@@ -143,8 +136,8 @@
         <option value="$PROJECT_DIR$/code/analyse_data/analyse_donnees.py" />
         <option value="$PROJECT_DIR$/code/UI/QuickDraw_ui.py" />
         <option value="$PROJECT_DIR$/code/main.py" />
-        <option value="$PROJECT_DIR$/code/main_ensemble.py" />
         <option value="$PROJECT_DIR$/code/main_moyenne.py" />
+        <option value="$PROJECT_DIR$/code/main_ensemble.py" />
         <option value="$PROJECT_DIR$/code/model_creation.py" />
       </list>
     </option>
@@ -382,7 +375,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/code/model_creation.py</url>
-          <line>47</line>
+          <line>53</line>
           <option name="timeStamp" value="112" />
         </line-breakpoint>
       </breakpoints>
@@ -659,29 +652,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/code/main_ensemble.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2199">
-          <caret line="157" selection-start-line="157" selection-end-line="157" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-11">
+          <caret line="3" column="54" selection-start-line="3" selection-start-column="54" selection-end-line="3" selection-end-column="55" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/code/model_creation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="82" lean-forward="true" selection-start-line="82" selection-end-line="82" />
+        <state relative-caret-position="499">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
             <element signature="e#207#692#0" />
+            <element signature="e#1257#1728#0" />
+            <element signature="e#2334#2430#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/code/main_moyenne.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-204">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        <state relative-caret-position="782">
+          <caret line="46" column="25" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
             <element signature="e#3313#4335#0" />

@@ -1,0 +1,10 @@
+airplane.csv
+alarm clock.csv
+ambulance.csv
+angel.csv
+Sample données d'entraînement (total:1000): {'airplane': 250, 'alarm clock': 250, 'ambulance': 250, 'angel': 250}
+Aucun modèle chargé pour entraînement
+Epoch 0 -Train acc: 98.30 -Val acc: 93.50 -Train loss: 0.1820 - Val loss: 0.2762 -Train score top3 : 99.0667 -Val score top3 : 96.3750
+{'airplane': 0.94, 'alarm clock': 0.96, 'ambulance': 0.99, 'angel': 0.85}
+Epoch 1 -Train acc: 99.90 -Val acc: 95.00 -Train loss: 0.0796 - Val loss: 0.1817 -Train score top3 : 99.9500 -Val score top3 : 97.2500
+{'airplane': 0.92, 'alarm clock': 0.95, 'ambulance': 0.96, 'angel': 0.97}

@@ -27,28 +27,22 @@ def create_model(use_gpu,path_existing_model=None):
 
 
 class Model_Ensemble(nn.Module):
-    def __init__(self, list_model_saves_path,use_gpu,freeze_all):
+    def __init__(self, list_models):
         super(Model_Ensemble, self).__init__()
 
-        model = create_model(use_gpu)
-        self.model_0 = load_model_weights(model, list_model_saves_path[0], use_gpu=use_gpu)
-        model = create_model(use_gpu)
-        self.model_1 = load_model_weights(model, list_model_saves_path[1], use_gpu=use_gpu)
 
-        if freeze_all:
-            for param_name, param in self.model_0.named_parameters():
-                param.requires_grad = False
-            for param_name, param in self.model_1.named_parameters():
-                param.requires_grad = False
+        self.nb_model=len(list_models)
+        self.list_models =list_models
 
 
-        self.classifier = nn.Linear(2*340, 340)
+
+        self.classifier = nn.Linear(self.nb_model*340, 340)
 
     def forward(self, x):
         list_output = []
-        list_output.append(self.model_0(x))
-        list_output.append(self.model_1(x))
-
+        for model in self.list_models:
+            output = model(x)
+            list_output.append(output)
 
         x = torch.cat(list_output, dim=1)
         x = self.classifier(x)
@@ -82,11 +76,20 @@ class Model_Ensemble_moyenne(nn.Module):
 
 
 def create_ensemble_model(list_model_saves_path,use_gpu,frezze_all=True  ):
+    list_model=[]
+    for model_save_path in list_model_saves_path:
+        model=create_model(use_gpu)
+        model=load_model_weights(model,model_save_path,use_gpu=use_gpu)
 
+        if frezze_all:
+            for param_name, param in model.named_parameters():
+                param.requires_grad = False
 
-    model_ensemble=Model_Ensemble(list_model_saves_path,use_gpu,freeze_all=frezze_all)
-    if use_gpu:
-        model_ensemble.cuda()
+        if use_gpu:
+            model.cuda()
+        list_model.append(model)
+
+    model_ensemble=Model_Ensemble(list_model)
     return model_ensemble
 
 

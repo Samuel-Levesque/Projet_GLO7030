@@ -1,0 +1,75 @@
+{
+  "artifacts": [],
+  "command": "main_program",
+  "experiment": {
+    "base_dir": "D:\\User\\William\\Documents\\Devoir\\Projet Deep\\Projet_GLO7030\\code",
+    "dependencies": [
+      "numpy==1.15.0",
+      "sacred==0.7.4",
+      "torch==1.0.1"
+    ],
+    "mainfile": "main_ensemble.py",
+    "name": "Doodle_Boys",
+    "repositories": [],
+    "sources": [
+      [
+        "data_set_file.py",
+        "_sources\\data_set_file_e7d502fe76bbce993a645681dd6e56eb.py"
+      ],
+      [
+        "main_ensemble.py",
+        "_sources\\main_ensemble_3e9eb042ceb85a6637eebdd3cda2e6fe.py"
+      ],
+      [
+        "model_creation.py",
+        "_sources\\model_creation_f2d7248949890112703c576e26ced498.py"
+      ],
+      [
+        "test_metrics.py",
+        "_sources\\test_metrics_8ecd851e27ea334dc784dcbee43f991e.py"
+      ],
+      [
+        "trainning.py",
+        "_sources\\trainning_0fad5600f757084f3aaa004c67ec3f20.py"
+      ]
+    ]
+  },
+  "heartbeat": "2019-04-22T15:12:24.598667",
+  "host": {
+    "ENV": {},
+    "cpu": "Intel(R) Core(TM) i7-8700 CPU @ 3.20GHz",
+    "hostname": "DESKTOP-04C6VBJ",
+    "os": [
+      "Windows",
+      "Windows-10-10.0.17763-SP0"
+    ],
+    "python_version": "3.7.1"
+  },
+  "meta": {
+    "command": "main_program",
+    "options": {
+      "--beat_interval": null,
+      "--capture": null,
+      "--comment": null,
+      "--debug": false,
+      "--enforce_clean": false,
+      "--file_storage": null,
+      "--force": false,
+      "--help": false,
+      "--loglevel": null,
+      "--mongo_db": null,
+      "--name": null,
+      "--pdb": false,
+      "--print_config": false,
+      "--priority": null,
+      "--queue": false,
+      "--sql": null,
+      "--tiny_db": null,
+      "--unobserved": false
+    }
+  },
+  "resources": [],
+  "result": null,
+  "start_time": "2019-04-22T15:12:04.579242",
+  "status": "RUNNING"
+}
