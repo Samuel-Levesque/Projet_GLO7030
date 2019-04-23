@@ -53,18 +53,17 @@
 
 \begin{columns}
 \column{.4}
-\block{Introduction}{
+\block[bodyoffsety=-5mm, titleoffsety=-5mm]{Introduction}{
 
 \input{blocks/introduction}
 
 }
 
-
-\column{0.6}
-\block{Structure du réseau et méthodologie}{
-
-\input{blocks/structure_reseau}
-
+\column{.6}
+\block[bodyoffsety=-5mm, titleoffsety=-5mm]{Transformations}{
+	
+	\input{blocks/transformations}
+	
 }
 \end{columns}
 
@@ -72,21 +71,18 @@
 
 
 \begin{columns}
+\column{0.6}
+\block[bodyoffsety=-18mm, titleoffsety=-18mm]{Structure du réseau et méthodologie}{
+	
+	\input{blocks/structure_reseau}
+	
+}
+	
 \column{.4}
-\block[bodyoffsety=0mm, titleoffsety=0mm]{Contraintes}{
+\block[bodyoffsety=-18mm, titleoffsety=-18mm]{Contraintes}{
 
 \input{blocks/contraintes}
-
 }
-
-
-\column{.6}
-\block[bodyoffsety=0mm, titleoffsety=0mm]{Transformations}{
-
-\input{blocks/transformations}
-
-}
-
 \end{columns}
 
 
@@ -94,24 +90,22 @@
 
 \begin{columns}
 
-\column{.3}
-\block{Description des données}{
+\column{.4}
+\block[bodyoffsety=-18mm, titleoffsety=-18mm]{Description des données}{
 
 \input{blocks/description_donnees}
 
 }
 
-
 \column{.3}
-\block{Performances}
+\block[bodyoffsety=-18mm, titleoffsety=-18mm]{Performances}
 {
-
 \input{blocks/performances}
-
 }
 
 
-\column{.4}
+\column{.3}
+
 %\block{Autre section}
 %{
 %
@@ -120,7 +114,7 @@
 %}
 
 
-\block{Conclusion}{
+\block[bodyoffsety=-18mm, titleoffsety=-18mm]{Conclusion}{
 
 \input{blocks/conclusion}
 

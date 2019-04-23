@@ -3,19 +3,20 @@
 Plusieurs variantes du réseau pré-entraîné \emph{Resnet18}
 \begin{center}
 
-\includegraphics[width=34cm,height=34cm,keepaspectratio]{figures/structure_reseau.pdf}
+\includegraphics[width=39cm,height=39cm,keepaspectratio]{figures/structure_reseau.pdf}
       
 \end{center}
 
-Étant donné les contraintes, utilisations d'epochs non traditionnelles, chaque epoch consiste en un \textbf{échantillonnage d'un nombre fixe d'images par classe} (ex: 500 images aléatoires par classe: epoch de 170 000 données plutôt que le jeu complet).
+Étant donné les contraintes computationnelles, nous avons utilisé des \emph{epochs} non traditionnelles pour l'entraînement. 
+Chaque epoch consiste en un \colorbold{échantillonnage d'un nombre fixe d'images par classe} (ex: 500 images aléatoires par classe; epochs de 170 000 données plutôt que le jeu de données complet).
 
-Similaire à du \textbf{Bootstrapping} .
+Similaire à du \colorbold{Bootstrapping} .
 
 
-Variantes:
+\textbf{Variantes:}
 
 \begin{itemize}
-\item Échantillonnage variant selon l'exactitude par classe: $N^*=N(1-accuracy) +0.25N$
+\item Échantillonnage variant selon l'exactitude par classe (\colorbold{boosting}): $N^*=N(1-accuracy) +0.25N$
 \item Méthode par ensemble avec couche de classification
 \item Méthode par ensemble avec moyenne
 \end{itemize}
