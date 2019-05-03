@@ -9,6 +9,11 @@ La figure \ref{transformationimage} nous montre un exemple de transformation d'u
 	\label{transformationimage} 
 \end{figure}
 
+On passe donc d'une série de positions en format csv à une image 256x256 à un seul canal en noir et blanc lorsqu'on vient charger les données dans notre modèle. Cette technique évite d'avoir à stocker toutes les données sous forme d'images qui occuperait probablement plusieurs GO qui seraient instockables avec nos ressources actuelles. 
+
+
+
+
 La plupart des images sont loin d'être facile à apprendre pour un ordinateur, puisque que ces données ne sont pas filtrées par un humain qui peut valider si l'image est bonne. N'importe quel individu peut contribuer à cette base de données. Pour cette raison, on peut observer des images qui peuvent varier énormément pour une même classe. La figures \ref{frogs} nous permet de voir différentes images pour la classe \emph{frog}.
 
 
