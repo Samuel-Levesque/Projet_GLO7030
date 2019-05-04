@@ -1,7 +1,6 @@
 
 
-
-La figure \ref{transformationimage} nous montre un exemple de transformation d'une image de maison réalisé en 2 traits de crayons. 
+La figure \ref{transformationimage} nous montre un exemple de transformation d'une image de maison réalisée en 2 traits de crayons. 
 
 \begin{figure}[h]
 	\includegraphics[width=\linewidth]{images/Transformations_horizontal.pdf} % Figure image
@@ -9,13 +8,12 @@ La figure \ref{transformationimage} nous montre un exemple de transformation d'u
 	\label{transformationimage} 
 \end{figure}
 
-On passe donc d'une série de positions en format csv à une image 256x256 à un seul canal en noir et blanc lorsqu'on vient charger les données dans notre modèle. Cette technique évite d'avoir à stocker toutes les données sous forme d'images qui occuperait probablement plusieurs GO qui seraient instockables avec nos ressources actuelles. 
+On passe donc d'une série de positions en format vectoriel à une image 256x256 à un seul canal en noir et blanc lorsqu'on vient charger les données dans notre modèle. 
+Cette technique nous évite de stocker toutes les données sous forme d'images qui doubleraient facilement la quantité de données à emmagasiner pour traitement. 
 
 
-
-
-La plupart des images sont loin d'être facile à apprendre pour un ordinateur, puisque que ces données ne sont pas filtrées par un humain qui peut valider si l'image est bonne. N'importe quel individu peut contribuer à cette base de données. Pour cette raison, on peut observer des images qui peuvent varier énormément pour une même classe. La figures \ref{frogs} nous permet de voir différentes images pour la classe \emph{frog}.
-
+La plupart des images sont loin d'être faciles à apprendre pour un ordinateur, puisqu'il existe une multitude de façons de dessiner une même classe.
+N'importe quel individu peut contribuer à cette base de données de dessins ce qui fait en sorte qu'on a une grande variété de dessins différents pour une classe donnée.. La figures \ref{frogs} nous permet de voir différentes images pour la classe \emph{frog}.
 
 
 \begin{figure}[h]
@@ -25,4 +23,7 @@ La plupart des images sont loin d'être facile à apprendre pour un ordinateur, 
 \end{figure}
 
 
-On peut voir que les utilisateurs n'adoptent pas tous les mêmes techniques pour dessiner un même objet. Également puisque les utilisateurs ont seulement 20 secondes pour faire leur dessin, certains d'entre eux sont parfois incomplets. Comme aucun filtrage n'a été fait, on peut constater également que certaines images ne sont pas réalisés dans le but exact du projet (certains utilisateurs ne dessinent pas la bonne catégorie ou bien ne font qu'écrire le nom de la classe)
+On peut voir que les utilisateurs n'adoptent pas tous les mêmes techniques pour dessiner un même objet. 
+Également puisque les utilisateurs ont seulement 20 secondes pour faire leur dessin, certains d'entre eux sont parfois incomplets.
+Notre modèle doit donc apprendre à composer avec cette grande variabilité et faire une prédiction précise même lorsqu'un dessin est partiel.
+

@@ -1,6 +1,10 @@
 
 \subsection{Résultats en test}
 
+Pour comparer nos différents modèles, nous avons utilisé deux mesures: la précision et la \emph{Mean Average Precision} sur trois prédictions (MAP@3).
+Le choix de cette deuxième mesure est le fait que c'est cette mesure qui est utilisée pour évaluer les modèles dans le projet Kaggle \footnote{\url{https://www.kaggle.com/c/quickdraw-doodle-recognition}} présenté par \emph{Google AI}.
+Cette mesure calcule la précision, mais donne des points partiels de 0.5 et 0.33 pour les cas où le modèle prédit la vraie classe en deuxième ou troisième position.
+
 Voici la liste des résultats obtenus sur le jeu de données de test qui comporte 340 000 (1000 par classe) données:
 
 \begin{center}
@@ -8,7 +12,6 @@ Voici la liste des résultats obtenus sur le jeu de données de test qui comport
 \begin{tabular}{c c c}
 \toprule
 \textbf{Modèle} & \textbf{Accuracy} & \textbf{MAP@3}  \\
-
 
 
 \midrule
@@ -25,17 +28,27 @@ Ensemble avec moyenne     & \textbf{79.93}&\textbf{85.66}        \\
 \end{tabular}
 \end{center}
 
-On peut voir que l'échantillonnage ciblé du second modèle nous apporte un gain en accuracy d'environ 2\% (de 77.57\% à 79.58\%). C'est un résultat assez intéressant. On peut supposer que cela a permis de gagner un peu en accuracy sur les classes moins bien prédites sans trop affecter celles qui déjà bien classées.
+On peut voir que l'échantillonnage ciblé du second modèle nous apporte un gain de précision d'environ 2\% (de 77.57\% à 79.58\% en précision et de 83.78\% à 85.42\% en MAP@3). 
+C'est un résultat assez intéressant puisque cette technique n'est pas standard, mais apporte tout de même un gain de performance non négligeable. 
+On peut supposer que cela a permis de gagner un peu en précision sur les classes moins bien prédites sans trop affecter celles qui étaient déjà bien classées.
+On peut expliquer cela par le fait que les classes les plus difficiles à prédire sont celles qui ont une grande variabilité dans les dessins faits par les utilisateurs. 
+Il faut donc plus d'exemples différents de cette classe pour bien capter toutes leurs particularités alors qu'on n'a besoin que de quelques observations pour les classes plus simples.
 
 
-Malheureusement, la modèle par ensemble avec la couche de classification supplémentaire ne donne pas les résultats escomptés, avec une accuracy en test de 75.92\%, c'est le plus faible de tous les modèles essayés.
+Malheureusement, la modèle par ensemble avec la couche de classification supplémentaire ne donne pas les résultats escomptés.
+Avec une précision en test de 75.92\%, c'est le plus faible de tous les modèles essayés. On pense toutefois que si on avait eu un entraînement qui converge, ce modèle aurait donné des performances au moins aussi bonnes que le pire des deux modèles \emph{ResNet18}.
 
 
-Le meilleur d'entre tous est le modèle qui fait une moyenne simple des deux premiers modèles avec une accuracy de 79.93\%.
+Le meilleur d'entre tous est le modèle qui fait une moyenne simple des deux premiers modèles avec une précision de 79.93\% et une MAP@3 de 85.66\% en test.
+
+Ces résultats sont loins des meilleurs modèles qui ont été soumis pour la compétition Kaggle où les meilleurs compétiteurs ont obtenus des MAP@3 d'environ 95\%, mais nous sommes tout de même satisfaits des résultats obtenus compte tenu des ressources de calcul limitées qui étaient à notre disposition.
+Également, on peut expliquer une bonne partie de cette différence de performance par le fait que notre modèle n'utilise pas l'information temporelle des vecteurs de dessins. 
+Certaines équipes ont utilisé des modèles aussi simples que nous, mais ont utilisés plusieurs canaux d'image pour représenter l'évolution temporelle du dessin et ont pu obtenir très rapidement des MAP@3 supérieurs à 90\%.
 
 
 \subsection{Analyse d'erreur}
-Il est intéressant de regarder quelques prédictions de notre modèle, cela permet de voir pourquoi il ne fonctionne pas toujours parfaitement. On peut également observer l'accuracy par classe en test pour voir quelles classes fonctionnent moins bien.
+Il est intéressant de regarder quelques prédictions de notre modèle pour mieux comprendre où sont les erreurs qu'il commet. 
+On peut également observer la précision par classe en test pour voir quelles classes fonctionnent moins bien.
 
 
 Voici un tableau de quelques classes avec une accuracy assez faible (modèle avec échantillons ciblés):
@@ -54,7 +67,11 @@ frog & 0.693 \\ \hline
 
 
 
-On constate que la plupart de ces classes de dessin de sont évidentes à dessiner et plusieurs techniques peuvent être utilisées pour faire certains de ses dessins. Un humain peut généralement reconnaître le dessin d'un même objet, même si celui est représenté de plusieurs manières différentes (ex: grenouille à la figure \ref{frogs}), ce n'est toutefois pas aussi évident pour réseau de convolution. 
+On constate que la plupart de ces classes de dessin ne sont évidentes à dessiner et plusieurs techniques peuvent être utilisées pour faire certains de ses dessins. 
+Un humain peut généralement reconnaître le dessin d'un même objet, même si celui est représenté de plusieurs manières différentes (ex: grenouille à la figure \ref{frogs}). 
+Ce n'est toutefois pas aussi évident pour réseau de convolution.
+
+Pour aller chercher une précision supplémentaire sur ces classes problématiques, nous aurions pu construire des classificateurs binaires spécialisés pour ces classes et les utiliser dans notre modèle par ensemble.
 
 On peut observer des classes ayant bien performées: 
 
@@ -72,7 +89,8 @@ clock & 0.924 \\ \hline
 \end{center}
 
 
-On constate qu'il s'agit principalement de classes qui sont simples et rapides à dessiner au complet et il n'existe pas plusieurs façons possibles pour dessiner ces dessins, par exemple snowman, star et ladder sont souvent dessinés de la même façon.
+On constate qu'il s'agit principalement de classes qui sont simples et rapides à dessiner au complet et il n'existe pas plusieurs façons possibles pour dessiner ces dessins
+Par exemple \emph{snowman}, \emph{star} et \emph{ladder} sont souvent dessinés de la même façon.
 
 
 On peut également observer quelques mauvaises prédictions de notre modèle sur la figure \ref{comborate}
@@ -83,7 +101,9 @@ On peut également observer quelques mauvaises prédictions de notre modèle sur
 	\label{comborate} 
 \end{figure}
 
-On peut voir que même quand le modèle se trompe, ses prédictions sont quand mêmes représentatives de ce qu'un humain pourrait voir. Par exemple, même si la première image est supposée être un nuage, on peut facilement interpréter ce dessin comme étant un bracelet. 
+On peut voir que même quand le modèle se trompe, ses prédictions sont quand mêmes représentatives de ce qu'un humain pourrait voir.
+Par exemple, même si la première image est supposée être un nuage, on pourrait interpréter ce dessin comme étant un bracelet.
 
 
-Même si son accuracy n'est pas si élevé, le modèle nous donne quand même l'impression de performer assez bien étant donné que la plupart de ses prédictions font souvent du sens pour un humain même si elles ne sont pas parfaites. C'est un élément important à garder en tête lorsqu'on veut construire une application réelle en intelligence artificielle.  
+Même si sa précision n'est pas si élevée, le modèle nous donne quand même l'impression de performer assez bien étant donné que la plupart de ses prédictions font souvent du sens pour un humain même si elles ne sont pas parfaites.
+Il est possible de tester l'application créée dans le cadre de ce projet en clonant le projet Github du projet\footnote{\url{https://github.com/Samuel-Levesque/Projet_GLO7030}} pour tester d'autres exemples du prédiction du modèle.

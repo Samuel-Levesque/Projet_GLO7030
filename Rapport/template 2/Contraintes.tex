@@ -1,22 +1,25 @@
-Une quantité de données aussi importante crée des enjeux et problèmes importants dans l'entraînement du réseau. On présente ici les enjeux principaux qui nous amènent à tester différentes manières d'entraînement.
-
-
-\subsection{Enjeux de mémoire}
-
-Pour pouvoir utiliser des réseaux de neurones à convolution, il faut utiliser des données étant sous forme d'image. Étant donné la quantité massive de données, il ne semble pas optimal de transformer toutes les données du format csv en images directement avant l'entraînement. Pour pallier à ce problème et pour pouvoir utiliser des réseaux pré-entraîné , on transforme le format csv des traits de crayon au moment où on charge les données dans le modèle.
-
-\subsection{Enjeux de performance}
-
-La quantité massive de données ne nous permet pas de faire des epochs traditionnelles. En effet, avec les moyens de calculs que nous utilisons (\emph{Google Colab}) , une seule epoch peut prendre environ 1 mois en calculant 24h/24.
-
-Pour cette même raison, on ne peut pas tester une grande quantité d'hyperparamètres. Il faut se limiter un ensemble d'hyperparamètres pour chacun des modèles que l'on veut tester.
-
+Une quantité de données aussi importante crée des enjeux et problèmes importants dans l'entraînement du réseau. On présente ici les enjeux principaux qui nous amènent à tester différentes techniques d'entraînement.
 
 \subsection{Enjeux d'une application réelle}
 
-La mise en place d'une application concrète nous amène également quelques contraintes supplémentaires. L'application créée nous fait perdre l'information temporelle des traits de crayons puisque la sortie de l'application est une image de format png. On ne peut donc pas utiliser l'ordre dans lequel les traits ont été dessinés par l'utilisateur. Il nous est donc impossible d'utiliser différents canaux pour simuler l'évolution temporelle du dessin
+La création d'une interface graphique pour les utilisateurs nous amène des contraintes au niveau du format de nos intrants.
+Puisqu'il aurait été très complexe de créer une application qui capture les positions des traits de crayon dans le temps et de convertir ces données pour qu'elles aient le même format que notre base de données d'entraînement, nous avons décidé d'utiliser des images en intrant de notre modèle plutôt que les vecteurs position/temps.
+Ce choix nous force à perdre l'information temporelle des dessins qui sont faits par les utilisateurs et à convertir nos données sources avant entraînement de notre modèle.
+On ne peut donc pas utiliser l'ordre dans lequel les traits ont été dessinés par l'utilisateur. 
+Il nous est donc impossible d'utiliser différents canaux pour simuler l'évolution temporelle du dessin tel que mentionné dans plusieurs discussions \emph{Kaggle}\footnote{\url{https://www.kaggle.com/c/quickdraw-doodle-recognition/discussion/73761#latest-436738}}.
 
+\subsection{Enjeux de mémoire}
 
+À cause des contraintes venant de notre application, nous devons transformer nos données de format vectoriel en images. 
+Étant donné la quantité massive de données, il ne semble pas optimal de transformer toutes les données du format vectoriel en images directement avant l'entraînement puisque cela amplifierait encore plus nos problèmes de stockage.
+Pour palier à ce problème et pour pouvoir utiliser des réseaux pré-entraînés, on transforme le format vectoriel des traits de crayon au moment où on charge les données dans le modèle.
+Malgré cela, les 25Gb de données vectorielles amènent d'importants enjeux de stockage lors de l'entraînement.
+Pour éviter de transférer nos données à chaque fois qu'on veut débuter un entraînement, nosua avons décidé la plateforme \emph{Google Colab} qui permet de se connecter directement à \emph{Google Drive} où nous stockons nos données.
 
+\subsection{Enjeux de performance}
 
+La quantité massive de données ne nous permet pas de faire des epochs traditionnelles. 
+En effet, avec les moyens de calculs que nous utilisons (\emph{Google Colab}) , une seule epoch peut prendre environ 1 mois en calculant 24h/24.
+
+Pour cette même raison, on ne peut pas tester une grande quantité d'hyperparamètres. Il faut se limiter un ensemble d'hyperparamètres pour chacun des modèles que l'on veut tester.
 

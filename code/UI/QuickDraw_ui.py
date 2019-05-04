@@ -143,8 +143,8 @@ class QuickDrawUI(QtWidgets.QDialog):
 
 if __name__ == '__main__':
     import os
-    #os.chdir('/Users/Samuel_Levesque/Documents/GitHub/Projet_GLO7030/code')
-    os.chdir("D:/User/William/Documents/Devoir/Projet Deep/Projet_GLO7030/code")
+    os.chdir('/Users/Samuel_Levesque/Documents/GitHub/Projet_GLO7030/code')
+#    os.chdir("D:/User/William/Documents/Devoir/Projet Deep/Projet_GLO7030/code")
 
     app = QtWidgets.QApplication(sys.argv)
     window = QuickDrawUI()

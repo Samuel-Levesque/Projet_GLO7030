@@ -1,13 +1,15 @@
-Google AI rend disponible une partie du jeux de données de \emph{Quick, Draw}\footnote{Lien} qui est constitué de milliards de dessins fait à la main par différents utilisateurs sur leur plateforme web. 
+Google AI rend disponible une partie du jeux de données de \emph{Quick, Draw}\footnote{\url{https://quickdraw.withgoogle.com/data}} qui est constitué de milliards de dessins fait à la main par différents utilisateurs sur leur plateforme web. 
 
 
-Les données sont fournies sous forme de fichiers csv (1 par classe) contenant principalement des vecteurs de positions ayant permis de réaliser les traits du dessin, le pays de l'utilisateur et la classe du dessin.
+Les données sont fournies sous forme de fichiers csv (1 par classe) contenant principalement des vecteurs de positions du crayon dans le temps ayant permis de réaliser les traits du dessin, le pays de l'utilisateur et la classe du dessin.
 
+Les dessins sont composés de vecteurs distincts représentants chacun des traits de crayon et chaque vecteur est composé de points tridimensionnels (x, y, temps écoulé depuis le premier point du vecteur).
+Cette manière de présenter les dessins permet de sauver une grande quantité d'espace mémoire puisque ces données sont beaucoup moins volumineuses que des fichiers d'images brutes.
 
 Il s'agit d'un jeu de données extrêmement volumineux, on note certaines caractéristiques :
 
 \begin{itemize}
-	\item \textbf{340 classes}.
+	\item \textbf{340 classes} (Types de dessins différents).
 	\item \textbf{$\approx$ 150 000 images/classe}.
 	\item Plus de \textbf{51 millions d'images} au total
 	\item \textbf{24,4 Gb} de données sous format .csv.
