@@ -1,4 +1,4 @@
-En gardant nos contraintes et enjeux en tête, il fallait trouver une façon efficace d'entraîner un modèle dans un temps raisonnable. Plusieurs techniques d'échantillonnage on pu être testées.
+En gardant nos contraintes et enjeux en tête, il fallait trouver une façon efficace d'entraîner un modèle dans un temps raisonnable. Plusieurs techniques d'échantillonnage ont pu être testées.
 
 
 \subsection{Échantillonnage fixe par classe}
@@ -7,11 +7,11 @@ Le premier modèle testé est un modèle pré-entraîné avec architecture \emph
 
 
 
-Ainsi, à chacune de nos "epochs", on échantillonne (sans remise) un nombre $N$ fixe de données par classe parmi nos 150 000 données par classe. Ces $340N$ données servent à faire une "epoch"  pour notre modèle. On procède de la même façon à chaque "epoch" en ré-échantillonnant dans nos 150 000 données par classe (même celles pigées aux anciennes "epochs"). 
-En entraînant de notre modèle de cette façon, il est possible que certaines données ne soient jamais vues et que d'autres le soient plusieurs fois.
+Ainsi, à chacune de nos "epochs", on échantillonne (sans remise) un nombre fixe $N$ de données par classe parmi nos 150 000 données par classe. Ces $340N$ données servent à faire une "epoch"  pour notre modèle. On procède de la même façon à chaque "epoch" en ré-échantillonnant dans nos 150 000 données par classe (même celles pigées aux anciennes "epochs"). 
+En entraînant notre modèle de cette façon, il est possible que certaines données ne soient jamais vues et que d'autres le soient plusieurs fois.
 
 
-Cette technique d'échantillonnage s'apparente au \emph{Bootstrapping} utilisé pour les méthodes par ensemble. Elle agit à la fois comme méthode d'échantillonnage aléatoire et comme méthode de régularisation. 
+Cette technique d'échantillonnage s'apparente au \emph{bootstrapping} utilisé pour les méthodes par ensemble. Elle agit à la fois comme méthode d'échantillonnage aléatoire et comme méthode de régularisation. 
 On peut s'attendre à ce que le modèle n'overfit pas excessivement notre jeu de données d'entraînement en procédant de cette façon puisque les données ne seront pas vues plusieurs fois de façon rapide et le réseau ne peut donc pas les apprendre par coeur.
 
 
@@ -29,7 +29,7 @@ En utilisant un \emph{early stopping} et en utilisant les performances maximales
 
 
 \subsection{Échantillonnage variable par classe}
-La deuxième méthode d'entraînement est similaire à la première avec une légère modification qui essaie de privilégier les classes qui performment moins bien dans le but de simuler un processus de \emph{boosting}.
+La deuxième méthode d'entraînement est similaire à la première avec une légère modification qui essaie de privilégier les classes qui performent moins bien dans le but de simuler un processus de \emph{boosting}.
 
 
 L'idée de base est d'échantillonner un plus grand nombre de données des classes qui sont mal prédites et un plus petit nombre pour celles qui sont bien prédites durant l'entraînement. 
@@ -69,12 +69,12 @@ Par manque de temps, l'entraînement du modèle n'a pas pu être complété à 1
 \end{figure}
 
 
-On voit que la précision sur le jeu d'entraînement est pratiquement identique à celle de validation et qu'elles ne semblent pas encore avoir atteint un plateau lors de l'entraînement que ous avons fait. Il aurait été intéressant de voir les résultats après convergence puisque nous passons que cette technique aurait pu nous permettre d'obtenir des performances légèrement supérieures à notre deuxième modèle. 
+On voit que la précision sur le jeu d'entraînement est pratiquement identique à celle de validation et qu'elles ne semblent pas encore avoir atteint un plateau lors de l'entraînement que nous avons fait. Il aurait été intéressant de voir les résultats après convergence puisque nous passons que cette technique aurait pu nous permettre d'obtenir des performances légèrement supérieures à notre deuxième modèle. 
 Avec un \emph{early stopping}, on obtient une précision de 75.81\% en validation. 
 
 
 \subsection{Modèle par ensemble avec moyenne simple des 2 premiers modèles}
 
 Le dernier modèle que nous avons essayé est simplement d'utiliser la prédiction moyenne faite selon nos deux modèles \emph{ResNet18}. 
-Cette technique par ensemble nous permet d'obtenir une précision de 79,94\% en validation, ce qui est légèrement supérieur à notre deuxième modèle entraîné avec échantillonnage ciblé. 
+Cette technique par ensemble nous permet d'obtenir une précision de 79.94\% en validation, ce qui est légèrement supérieur à notre deuxième modèle entraîné avec échantillonnage ciblé. 
 

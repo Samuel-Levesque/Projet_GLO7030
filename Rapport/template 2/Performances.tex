@@ -2,7 +2,7 @@
 \subsection{Résultats en test}
 
 Pour comparer nos différents modèles, nous avons utilisé deux mesures: la précision et la \emph{Mean Average Precision} sur trois prédictions (MAP@3).
-Le choix de cette deuxième mesure est le fait que c'est cette mesure qui est utilisée pour évaluer les modèles dans le projet Kaggle \footnote{\url{https://www.kaggle.com/c/quickdraw-doodle-recognition}} présenté par \emph{Google AI}.
+Le choix de cette deuxième mesure est justifié par le fait que c'est cette mesure qui est utilisée pour évaluer les modèles dans le projet Kaggle \footnote{\url{https://www.kaggle.com/c/quickdraw-doodle-recognition}} présenté par \emph{Google AI}.
 Cette mesure calcule la précision, mais donne des points partiels de 0.5 et 0.33 pour les cas où le modèle prédit la vraie classe en deuxième ou troisième position.
 
 Voici la liste des résultats obtenus sur le jeu de données de test qui comporte 340 000 (1000 par classe) données:
@@ -68,7 +68,7 @@ frog & 0.693 \\ \hline
 
 On constate que la plupart de ces classes de dessin ne sont évidentes à dessiner et plusieurs techniques peuvent être utilisées pour faire certains de ses dessins. 
 Un humain peut généralement reconnaître le dessin d'un même objet, même si celui est représenté de plusieurs manières différentes (ex: grenouille à la figure \ref{frogs}). 
-Ce n'est toutefois pas aussi évident pour réseau de convolution.
+Ce n'est toutefois pas aussi évident pour le réseau à convolution qui se base exclusivement sur les exemples qu'il à reçu.
 
 Pour aller chercher une précision supplémentaire sur ces classes problématiques, nous aurions pu construire des classificateurs binaires spécialisés pour ces classes et les utiliser dans notre modèle par ensemble.
 
@@ -88,7 +88,7 @@ clock & 0.924 \\ \hline
 \end{center}
 
 
-On constate qu'il s'agit principalement de classes qui sont simples et rapides à dessiner au complet et il n'existe pas plusieurs façons possibles pour dessiner ces dessins
+On constate qu'il s'agit principalement de classes qui sont simples et rapides à dessiner au complet et il n'existe pas plusieurs façons possibles de dessiner ces dessins
 Par exemple \emph{snowman}, \emph{star} et \emph{ladder} sont souvent dessinés de la même façon.
 
 
@@ -104,5 +104,5 @@ On peut voir que même quand le modèle se trompe, ses prédictions sont quand m
 Par exemple, même si la première image est supposée être un nuage, on pourrait interpréter ce dessin comme étant un bracelet.
 
 
-Même si sa précision n'est pas si élevée, le modèle nous donne quand même l'impression de performer assez bien étant donné que la plupart de ses prédictions font souvent du sens pour un humain même si elles ne sont pas parfaites.
+Même si sa précision n'est pas si élevée, le modèle nous donne l'impression de performer assez bien étant donné que la plupart de ses prédictions font souvent du sens pour un humain même lorsqu'elles ne correspondent pas aux étiquettes des données.
 Il est possible de tester l'application créée dans le cadre de ce projet en clonant le projet Github du projet\footcite{Github:repo} pour tester d'autres exemples du prédiction du modèle.

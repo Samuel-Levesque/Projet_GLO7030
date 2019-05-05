@@ -6,7 +6,7 @@ La création d'une interface graphique pour les utilisateurs nous amène des con
 Puisqu'il aurait été très complexe de créer une application qui capture les positions des traits de crayon dans le temps et de convertir ces données pour qu'elles aient le même format que notre base de données d'entraînement, nous avons décidé d'utiliser des images en intrant de notre modèle plutôt que les vecteurs position/temps.
 Ce choix nous force à perdre l'information temporelle des dessins qui sont faits par les utilisateurs et à convertir nos données sources avant entraînement de notre modèle.
 On ne peut donc pas utiliser l'ordre dans lequel les traits ont été dessinés par l'utilisateur. 
-Il nous est donc impossible d'utiliser différents canaux pour simuler l'évolution temporelle du dessin tel que mentionné dans plusieurs discussions \emph{Kaggle}\footnote{\url{https://www.kaggle.com/c/quickdraw-doodle-recognition/discussion/73761#latest-436738}}.
+Il nous est impossible d'utiliser différents canaux pour simuler l'évolution temporelle du dessin tel que mentionné dans plusieurs discussions \emph{Kaggle}\footnote{\url{https://www.kaggle.com/c/quickdraw-doodle-recognition/discussion/73761#latest-436738}}.
 
 \subsection{Enjeux de mémoire}
 
@@ -14,7 +14,7 @@ Il nous est donc impossible d'utiliser différents canaux pour simuler l'évolut
 Étant donné la quantité massive de données, il ne semble pas optimal de transformer toutes les données du format vectoriel en images directement avant l'entraînement puisque cela amplifierait encore plus nos problèmes de stockage.
 Pour palier à ce problème et pour pouvoir utiliser des réseaux pré-entraînés, on transforme le format vectoriel des traits de crayon au moment où on charge les données dans le modèle.
 Malgré cela, les 25Gb de données vectorielles amènent d'importants enjeux de stockage lors de l'entraînement.
-Pour éviter de transférer nos données à chaque fois qu'on veut débuter un entraînement, nosua avons décidé la plateforme \emph{Google Colab} qui permet de se connecter directement à \emph{Google Drive} où nous stockons nos données.
+Pour éviter de transférer nos données à chaque fois qu'on veut débuter un entraînement, nous avons décidé d'utiliser la plateforme \emph{Google Colab} qui permet de se connecter directement à \emph{Google Drive} où nous stockons nos données.
 
 \subsection{Enjeux de performance}
 
