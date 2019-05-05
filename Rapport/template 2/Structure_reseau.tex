@@ -16,7 +16,7 @@ On peut s'attendre à ce que le modèle n'overfit pas excessivement notre jeu de
 
 
 Si on fait 35 epochs de la sorte avec un nombre $N=500$ (epoch de 170 000 données) on peut voir approximativement 11\% des données totales et environ 5.45\% des données vues sont échantillonnées plus d'une fois parmi les 35 epochs. 
-On peut voir qu'on est assez loin de voir de voir la totalité du jeu de données même après les 35 epochs passées à cause de la quantité énorme de données disponibles. 
+On peut voir qu'on est assez loin de voir la totalité du jeu de données même après les 35 epochs passées à cause de la quantité énorme de données disponibles. 
 Toutefois, le modèle semble tout de même converger vers une précision de validation d'environ 76\% comme on peut le voir sur la figure \ref{histmodelnormal}. 
 En utilisant un \emph{early stopping} et en utilisant les performances maximales sur le jeu de validation, on obtient une précision de validation de 77.44\%.
 
@@ -69,7 +69,7 @@ Par manque de temps, l'entraînement du modèle n'a pas pu être complété à 1
 \end{figure}
 
 
-On voit que la précision sur le jeu d'entraînement est pratiquement identique à celle de validation et qu'elles ne semblent pas encore avoir atteint un plateau lors de l'entraînement que nous avons fait. Il aurait été intéressant de voir les résultats après convergence puisque nous passons que cette technique aurait pu nous permettre d'obtenir des performances légèrement supérieures à notre deuxième modèle. 
+On voit que la précision sur le jeu d'entraînement est pratiquement identique à celle de validation et qu'elles ne semblent pas encore avoir atteint un plateau lors de l'entraînement que nous avons fait. Il aurait été intéressant de voir les résultats après convergence puisque nous pensons que cette technique aurait pu nous permettre d'obtenir des performances légèrement supérieures à notre deuxième modèle. 
 Avec un \emph{early stopping}, on obtient une précision de 75.81\% en validation. 
 
 

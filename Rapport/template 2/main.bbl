@@ -1,5 +1,5 @@
 % $ biblatex auxiliary file $
-% $ biblatex bbl format version 2.7 $
+% $ biblatex bbl format version 2.9 $
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
@@ -16,14 +16,14 @@
   {}
 \endgroup
 
-\sortlist[entry]{nyt/global/}
+\datalist[entry]{nyt/global//global/global}
   \entry{Alpaydin:2014:IML:2635955}{book}{}
     \name{author}{1}{}{%
       {{hash=AE}{%
          family={Alpaydin},
-         family_i={A\bibinitperiod},
+         familyi={A\bibinitperiod},
          given={Ethem},
-         given_i={E\bibinitperiod},
+         giveni={E\bibinitperiod},
       }}%
     }
     \list{publisher}{1}{%
@@ -34,6 +34,7 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2014}
+    \field{labeldatesource}{year}
     \field{sortinit}{A}
     \field{sortinithash}{A}
     \field{isbn}{0262028182, 9780262028189}
@@ -45,9 +46,9 @@
     \name{author}{1}{}{%
       {{hash=BCM}{%
          family={Bishop},
-         family_i={B\bibinitperiod},
+         familyi={B\bibinitperiod},
          given={Christopher\bibnamedelima M.},
-         given_i={C\bibinitperiod\bibinitdelim M\bibinitperiod},
+         giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod},
       }}%
     }
     \list{publisher}{1}{%
@@ -58,6 +59,7 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2006}
+    \field{labeldatesource}{year}
     \field{sortinit}{B}
     \field{sortinithash}{B}
     \field{isbn}{0387310738}
@@ -73,21 +75,21 @@
     \name{author}{3}{}{%
       {{hash=GI}{%
          family={Goodfellow},
-         family_i={G\bibinitperiod},
+         familyi={G\bibinitperiod},
          given={Ian},
-         given_i={I\bibinitperiod},
+         giveni={I\bibinitperiod},
       }}%
       {{hash=BY}{%
          family={Bengio},
-         family_i={B\bibinitperiod},
+         familyi={B\bibinitperiod},
          given={Yoshua},
-         given_i={Y\bibinitperiod},
+         giveni={Y\bibinitperiod},
       }}%
       {{hash=CA}{%
          family={Courville},
-         family_i={C\bibinitperiod},
+         familyi={C\bibinitperiod},
          given={Aaron},
-         given_i={A\bibinitperiod},
+         giveni={A\bibinitperiod},
       }}%
     }
     \list{publisher}{1}{%
@@ -98,6 +100,7 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2016}
+    \field{labeldatesource}{year}
     \field{sortinit}{G}
     \field{sortinithash}{G}
     \field{isbn}{0262035618, 9780262035613}
@@ -109,9 +112,9 @@
     \name{author}{1}{}{%
       {{hash=MKP}{%
          family={Murphy},
-         family_i={M\bibinitperiod},
+         familyi={M\bibinitperiod},
          given={Kevin\bibnamedelima P.},
-         given_i={K\bibinitperiod\bibinitdelim P\bibinitperiod},
+         giveni={K\bibinitperiod\bibinitdelim P\bibinitperiod},
       }}%
     }
     \list{publisher}{1}{%
@@ -122,6 +125,7 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2012}
+    \field{labeldatesource}{year}
     \field{sortinit}{M}
     \field{sortinithash}{M}
     \field{isbn}{0262018020, 9780262018029}
@@ -132,6 +136,7 @@
   \entry{Github:repo}{misc}{}
     \field{labeltitlesource}{title}
     \field{labelyear}{2019}
+    \field{labeldatesource}{year}
     \field{sortinit}{P}
     \field{sortinithash}{P}
   \field{howpublished}{\url{https://github.com/Samuel-Levesque/Projet_GLO7030/settings}}
@@ -142,6 +147,7 @@
   \entry{Pyqt}{misc}{}
     \field{labeltitlesource}{title}
     \field{labelyear}{2015}
+    \field{labeldatesource}{year}
     \field{sortinit}{P}
     \field{sortinithash}{P}
   \field{howpublished}{\url{https://www.riverbankcomputing.com/static/Docs/PyQt4/classes.html}}
@@ -152,6 +158,7 @@
   \entry{QD:2018}{misc}{}
     \field{labeltitlesource}{title}
     \field{labelyear}{2018}
+    \field{labeldatesource}{year}
     \field{sortinit}{Q}
     \field{sortinithash}{Q}
   \field{howpublished}{\url{https://www.kaggle.com/c/quickdraw-doodle-recognition}}
@@ -162,11 +169,12 @@
   \entry{Qd:Data}{misc}{}
     \field{labeltitlesource}{title}
     \field{labelyear}{2018}
+    \field{labeldatesource}{year}
     \field{sortinit}{Q}
     \field{sortinithash}{Q}
     \field{howpublished}{\url{https://quickdraw.withgoogle.com/data}}
     \field{title}{Quick, Draw!, the Data}
     \field{year}{2018}
   \endentry
-\endsortlist
+\enddatalist
 \endinput
